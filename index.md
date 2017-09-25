@@ -7,6 +7,10 @@ title:
 # mathjax test
 inline math $x$, $y$, $x_1$, $y_1$.
 
+
+[\\ a^2 + b^2 = c^2 \\]
+
+
 display math:
 $$
    |\psi_1\rangle = a|0\rangle + b|1\rangle
