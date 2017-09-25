@@ -1,24 +1,58 @@
-<!doctype html>
-<html lang="ja">
-  <head>
-     <meta charset="utf-8" />
-     <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js' type='text/javascript'>    
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>$title$</title>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         HTML: ["input/TeX","output/HTML-CSS"],
-        TeX: { extensions: ["http://sonoisa.github.io/xyjax_ext/xypic.js" ,"AMSmath.js","AMSsymbols.js"], 
+        TeX: { extensions: ["AMSmath.js","AMSsymbols.js"],
                equationNumbers: { autoNumber: "AMS" } },
         extensions: ["tex2jax.js"],
         jax: ["input/TeX","output/HTML-CSS"],
-        tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                   skipTags: ["script","noscript","style","textarea","code"],
-                   displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-                   processEscapes: true },
+        tex2jax: { inlineMath: [ ['$$','$$'], ["\\(","\\)"] ],
+                   displayMath: [ ['$$$$','$$$$'], ["\\[","\\]"] ],
+                   processEscapes: true ,
+                   skipTags: ["script","noscript","style","textarea"],
+                   processEnvironments: true
+                 },
         "HTML-CSS": { availableFonts: ["TeX"],
                       linebreaks: { automatic: true } }
-    });
-     </script>
-  </head>
-  <body>
+    });  </script>
+
+
+  <style type="text/css" media="screen, print">
+    @font-face {
+       font-family: 'HuiFontP109';
+       src: url("HuiFontP109.ttf") format("truetype");
+       src: local("HuiFontP109") format("truetype");
+       font-weight: normal;
+       font-style: normal;
+     }
+
+     body {
+        font-family: "HuiFontP109", sans-serif;
+     }
+
+     span {
+       font-family :  sans-serif;
+     }
+
+     p { line-height: 150%; 
+        margin-top: 0em;
+        margin-bottom: 2em;
+      }
+     pre {
+        margin:0em 0 0em 0;
+        padding:0em 0 0 0em; 
+        background-color:#cccccc;
+      }
+  </style>
+  
+<body>
      {{ content }}
-  </body>
+</body>
 </html>
