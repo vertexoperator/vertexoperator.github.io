@@ -1,0 +1,19 @@
+html{height:100%}
+body{background:#fff;border-top:7px;font:normal 1em/1.5 "Lucida Grande","Lucida Sans Unicode", "Lucida Sans",Tahoma,sans-serif;margin:0 0 1.5em;padding-left:2.5em;padding-right:2.5em;}
+.MathJax_Display {  text-align: left !important;}
+
+
+p { line-height: 150%; margin-top: 0em;margin-bottom: 2em; }
+
+h1, h2, h3, h4{font-size:150%;padding:7px 0px 5px 0px;margin:0px 0px 12px 0px;font-weight:normal;font-family:serif}
+h1{margin:10px 0px 20px 0px;padding:5px 20px 5px 0px;border-bottom:1px dotted #CCCCCC;color:#0F61A3;}
+h2{text-decoration: underline}
+
+
+#menubar{width:1200px;height:60px;padding-top:4px;padding-left:4px}
+
+ul#menu{float:right;margin:0px}
+ul#menu li{float:left;margin:5px 0 0 0;padding:0 0 0 46px;list-style:none}
+ul#menu li a{height:40px;text-decoration:none;border:none;font-size:150%;color:#888888;}
+
+#content{width:1200px;height:100px;padding-top:4px;padding-left:40px}
