@@ -1,4 +1,4 @@
-markdown: maruku
+markdown: kramdown
 kramdown:
   input: GFM
 baseurl: http://vertexoperator.github.io/
