@@ -2,7 +2,7 @@ markdown: maruku
 kramdown:
   input: GFM
 baseurl: http://vertexoperator.github.io/
-
+exclude: ['src']
 gems:
     - jemoji
     - jekyll-mentions
