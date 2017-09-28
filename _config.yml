@@ -1,4 +1,12 @@
-markdown: maruku
+markdown: Pandoc
+pandoc:
+  extensions:
+    - normalize
+    - smart
+    - mathjax
+    - csl: _styles/apa.csl
+    - bibliography: bibliography/references.bib
+
 kramdown:
   input: GFM
 baseurl: http://vertexoperator.github.io/
@@ -9,4 +17,4 @@ gems:
     - jekyll-redirect-from
     - jekyll-sitemap
     - jekyll-feed
-
+    - jekyll-pandoc
