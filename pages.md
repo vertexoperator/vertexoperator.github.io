@@ -11,8 +11,3 @@ title: archive
   </li>
 {% endfor %}
 
-{% for page in site.pages %}
-  <li>
-    <a href="{{ page.url }}">{{ page.date | date_to_long_string }} : {{ page.title }}</a>
-  </li>
-{% endfor %}
