@@ -18,3 +18,5 @@ gems:
     - jekyll-sitemap
     - jekyll-feed
     - jekyll-pandoc
+
+excerpt_separator: "\n"

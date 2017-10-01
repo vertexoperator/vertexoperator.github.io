@@ -2,8 +2,10 @@ html{height:100%}
 body{background:#fff;border-top:7px;font:normal 1em/1.5 "Lucida Grande","Lucida Sans Unicode", "Lucida Sans",Tahoma,sans-serif;margin:0 0 1.5em;padding-left:2.5em;padding-right:2.5em;}
 .MathJax_Display {  text-align: left !important;}
 
+li { margin-bottom: 1em;}
+li p { margin-bottom: 2em;}
 
-p { line-height: 150%; margin-top: 0em;margin-bottom: 2em; }
+p { line-height: 150%; margin-top: 0em;margin-bottom: 3em; }
 
 h1, h2, h3, h4{font-size:150%;padding:7px 0px 5px 0px;margin:0px 0px 12px 0px;font-weight:normal;font-family:serif}
 h1{margin:10px 0px 20px 0px;padding:5px 20px 5px 0px;border-bottom:1px dotted #CCCCCC;color:#0F61A3;}

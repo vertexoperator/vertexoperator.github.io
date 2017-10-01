@@ -7,12 +7,12 @@ TEST_FILES := $(addprefix $(TESTDIR)/, $(SRCS:.md=.html))
 
 .SUFFIXES:	.md .html .epub .pdf
 all: $(OUT_FILES)
-$(OUT_FILES): $(SRCS)
+$(OUTDIR)/%.html:%.md
 	pandoc -f markdown+autolink_bare_uris  -t html --template=./templates/template_jekyll --mathjax -o $@ $<
 
 test: $(TEST_FILES)
-$(TEST_FILES): $(SRCS)
-	pandoc -f markdown+autolink_bare_uris  -t html --template=./templates/template_standalone  --mathjax -o $@ $<
+$(TESTDIR)/%.html:%.md
+	pandoc -f markdown+autolink_bare_uris  -t html --template=./templates/template_standalone --mathjax -o $@ $<
 
 clean:
 	rm *.html
