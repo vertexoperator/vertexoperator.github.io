@@ -13,7 +13,7 @@ $(OUTDIR)/%.html:%.md
 
 test: $(TEST_FILES)
 $(TESTDIR)/%.html:%.md
-	pandoc -f markdown+autolink_bare_uris  -t html --template=$(TEMPLATE_DIR)/template_standalone --mathjax -o $@ $<
+	pandoc -f markdown+autolink_bare_uris  -t html --template=$(TEMPLATE_DIR)/template_katex --mathjax -o $@ $<
 
 clean:
 	rm *.html
