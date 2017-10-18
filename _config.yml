@@ -1,12 +1,4 @@
-markdown: Pandoc
-pandoc:
-  extensions:
-    - normalize
-    - smart
-    - mathjax
-    - csl: _styles/apa.csl
-    - bibliography: bibliography/references.bib
-
+markdown: kramdown
 kramdown:
   input: GFM
 baseurl: http://vertexoperator.github.io/
