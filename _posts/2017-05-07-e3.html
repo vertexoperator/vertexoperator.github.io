@@ -4,7 +4,7 @@ title: 計算ノート:3次元Euclid代数の既約ユニタリ表現
 ---
 <h1 id="次元euclid代数の既約ユニタリ表現">3次元Euclid代数の既約ユニタリ表現</h1>
 <p>一応、一通り流れがまとまっている文献として、古いものではあるが<br />
-[1]Some applications of the representation theory of the Euclidean group in three-space<br />
+Some applications of the representation theory of the Euclidean group in three-space<br />
 <a href="http://onlinelibrary.wiley.com/doi/10.1002/cpa.3160170409/abstract" class="uri">http://onlinelibrary.wiley.com/doi/10.1002/cpa.3160170409/abstract</a><br />
 がある。<br />
 <br />
@@ -19,7 +19,7 @@ title: 計算ノート:3次元Euclid代数の既約ユニタリ表現
 </p>
 <p><br/></p>
 <p>
-<p>それで、Lie環<span class="math inline">\(e(3)\)</span>の作用を、<span class="math inline">\(\mathcal{H}(r,s)\)</span>の基底に対して具体的に書き下したい。実Lie環<span class="math inline">\(e(e)\)</span>は6つの生成元<span class="math inline">\(J_1,J_2,J_3,P_1,P_2,P_3\)</span>を持ち、以下の関係式を満たす <span class="math display">\[[J_1,J_2] = J_3 , [J_2,J_3] = J_1 , [J_3,J_1] = J_2\]</span> <span class="math display">\[[J_1,P_2]=P_3 , [J_2,P_3] = P_1 , [J_3, P_1] = P_2\]</span> <span class="math display">\[[P_i,P_j] = 0\]</span> 複素化して、以下の演算子を導入する。 <span class="math display">\[X_{\pm} = -i J_1 \pm J_2 ,H = 2 i J_3 , P_{\pm} = P_1 \pm i P_2\]</span></p>
+<p>それで、Lie環<span class="math inline">\(e(3)\)</span>の作用を、<span class="math inline">\(\mathcal{H}(r,s)\)</span>の基底に対して具体的に書き下したい。実Lie環<span class="math inline">\(e(3)\)</span>は6つの生成元<span class="math inline">\(J_1,J_2,J_3,P_1,P_2,P_3\)</span>を持ち、以下の関係式を満たす <span class="math display">\[[J_1,J_2] = J_3 , [J_2,J_3] = J_1 , [J_3,J_1] = J_2\]</span> <span class="math display">\[[J_1,P_2]=P_3 , [J_2,P_3] = P_1 , [J_3, P_1] = P_2\]</span> <span class="math display">\[[P_i,P_j] = 0\]</span> 複素化して、以下の演算子を導入する。 <span class="math display">\[X_{\pm} = -i J_1 \pm J_2 ,H = 2 i J_3 , P_{\pm} = P_1 \pm i P_2\]</span></p>
 <p><span class="math inline">\(X_{+},H,X_{-}\)</span>は、<span class="math inline">\(sl(2,\mathbf{C})\)</span>-tripleと同じ関係式を満たす <span class="math display">\[[X_{+} , X_{-}] = H\]</span> <span class="math display">\[[H , X_{\pm}] = \pm 2 X_{\pm}\]</span></p>
 <p><span class="math inline">\(\mathcal{H}(r,s)\)</span>を<span class="math inline">\(SU(2)\)</span>に制限した時、<span class="math inline">\(SU(2)\)</span>の<span class="math inline">\(2l+1\)</span>次元既約ユニタリ表現に属する適当な基底(規格化されてるとは限らない)を<span class="math inline">\(f_m^{(l)}(m=-l,\cdots,l)\)</span>とする。<span class="math inline">\(J_1,J_2,J_3\)</span>の方は標準的な作用 <span class="math display">\[X_{+} f_{m}^{(l)} = (l-m) f_{m+1}^{(l)}\]</span> <span class="math display">\[X_{-} f_{m}^{(l)} = (l+m) f_{m-1}^{(l)}\]</span> <span class="math display">\[H f_{m}^{(l)} = 2 m f_{m}^{(l)}\]</span> で <span class="math display">\[P_{+} f_{m}^{(l)} = -\dfrac{r(l-s+1)}{(2l+1)(l+1)} f_{m+1}^{(l+1)} + \dfrac{rs(l-m)}{l(l+1)}f_{m+1}^{(l)} + \dfrac{r(l+s)(l+m)(l-m)}{(2l+1)l} f_{m+1}^{(l-1)}\]</span> <span class="math display">\[P_{-} f_m^{(l)} = \dfrac{r(l-s+1)}{(2l+1)(l+1)}f_{m-1}^{(l+1)} + \dfrac{rs(l+m)}{l(l+1)}f_{m-1}^{(l)} - \dfrac{r(l+s)(l+m)(l+m-1)}{(2l+1)l} f_{m-1}^{(l-1)}\]</span> <span class="math display">\[P_3 f_{m}^{(l)} = -\dfrac{r(l-s+1)}{(2l+1)(l+1)} f_m^{(l+1)} - \dfrac{mrs}{l(l+1)} f_m^{(l)} - \dfrac{r(l+s)(l+m)(l-m)}{(2l+1)l} f_m^{(l-1)}\]</span></p>
 <p>機械的な計算により、Casimir作用素が定数倍で作用することが分かる <span class="math display">\[(P_1^2+P_2^2+P_3^2) f_{m}^{(l)} = r^2 f_{m}^{(l)}\]</span> <span class="math display">\[i (J_1 P_1 + J_2 P_2 + J_3 P_3) f_{m}^{(l)} = rs f_{m}^{(l)}\]</span></p>
