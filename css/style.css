@@ -19,3 +19,14 @@ ul#menu li{float:left;margin:5px 0 0 0;padding:0 0 0 46px;list-style:none}
 ul#menu li a{height:40px;text-decoration:none;border:none;font-size:150%;color:#888888;}
 
 #content{width:1200px;height:100px;padding-top:4px;padding-left:40px}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+  border-width: 2px;
+  background-color: #cccccc;
+}
+
+.katex {
+  white-space: normal;
+}
