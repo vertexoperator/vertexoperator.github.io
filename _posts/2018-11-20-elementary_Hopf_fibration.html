@@ -1,0 +1,109 @@
+---
+layout: layout2
+title: Hopf fibration
+---
+<h1 id="hopf-fibration">Hopf fibration</h1>
+<h2 id="大学受験生の常識">大学受験生の常識</h2>
+<p><strong>絶対値が1の複素数で、二次元回転を表すことができる</strong></p>
+<p><span class="math inline">\(U(1) = \{z \in \mathbf{C} \:\mid |z| = 1 \}\)</span></p>
+<p><span class="math inline">\(SO(2) = \{ R \in Mat(2,\mathbb{R}) \mid R^{T} R = 1 , \det(R) = 1 \}\)</span></p>
+<p><span class="math inline">\(\left(\begin{array}{cc} a &amp; c \\ b &amp; d \end{array} \right) \left(\begin{array}{cc} a &amp; b \\ c &amp; d\end{array} \right) = \left(\begin{array}{cc} a^2+c^2 &amp; ab+cd \\ ab+cd &amp; b^2+d^2 \end{array} \right) = \left( \begin{array}{cc} 1 &amp; 0 \\ 0 &amp; 1\end{array} \right)\)</span></p>
+<p><span class="math inline">\(\det \left(\begin{array}{cc} a &amp; b \\ c &amp; d \end{array} \right) = ad -bc=1\)</span></p>
+<p><span class="math inline">\(\Rightarrow (a-d)^2 + (b+c)^2 = (a^2+c^2)+(b^2+d^2) - 2(ad-bc) = 0\)</span></p>
+<p><span class="math inline">\(\therefore) a=d , b=-c\)</span> かつ <span class="math inline">\(a^2+b^2=1\)</span></p>
+<p><span class="math inline">\(\rho :U(1) \xrightarrow{\sim} SO(2)\)</span></p>
+<p><span class="math inline">\(\rho(z) = \left(\begin{array}{cc} Re(z) &amp; Im(z) \\ -Im(z) &amp; Re(z) \end{array} \right)\)</span></p>
+<h2 id="プログラマの常識">プログラマの常識</h2>
+<p><strong>絶対値が<span class="math inline">\(1\)</span>の四元数で、三次元回転を表すことができる</strong></p>
+<p><span class="math inline">\(\mathbb{H} = \{ x_0 + x_1\mathbf{i} + x_2 \mathbf{j} + x_3 \mathbf{k} \mid x_n \in \mathbb{R} , n=1,2,3 \}\)</span></p>
+<p><span class="math inline">\(\mathbf{i}^2 = \mathbf{j}^2 = \mathbf{k}^2=-1\)</span> , <span class="math inline">\(\mathbf{i}\mathbf{j}=-\mathbf{j}\mathbf{i}=\mathbf{k}\)</span> , <span class="math inline">\(\mathbf{j} \mathbf{k} =-\mathbf{k}\mathbf{j}= \mathbf{i}\)</span> , <span class="math inline">\(\mathbf{k} \mathbf{i} = -\mathbf{i}\mathbf{k}=\mathbf{j}\)</span></p>
+<p><span class="math inline">\(U(1,\mathbb{H}) = \{ x \in \mathbb{H} \:\mid |x|=1 \}\)</span></p>
+<p><span class="math inline">\(SO(3) = \{R \in Mat(3,\mathbb{R}) | R^{T}R = 1 , \det(R)=1 \}\)</span></p>
+<p><span class="math inline">\(\rho : U(1,\mathbb{H}) \to SO(3)\)</span></p>
+<p><span class="math inline">\(\rho(x_0+x_1\mathbf{i} + x_2 \mathbf{j} + x_3 \mathbf{k}) = \left( \begin{array}{ccc} x_0^2 + x_1^2-x_2^2-x_3^2 &amp; 2(x_1x_2-x_0x_3) &amp; 2(x_0x_2+x_1x_3) \\ 2(x_0x_3+x_1x_2) &amp; x_0^2-x_1^2+x_2^2-x_3^2 &amp; 2(-x_0x_1+x_2x_3) \\ 2(x_1x_3 - x_0x_2) &amp; 2(x_2x_3 + x_0x_1) &amp; x_0^2-x_1^2-x_2^2+x_3^2 \end{array} \right)\)</span></p>
+<p><span class="math inline">\(\rho(1) = \rho(-1) = 1\)</span> → <span class="math inline">\(\rho\)</span>は、1:1ではない</p>
+<p>[<strong>check me</strong>] <span class="math inline">\(\rho(x)^T \rho(x) = 1\)</span> , <span class="math inline">\(\det \rho(x) = 1\)</span> , <span class="math inline">\(\rho(x)\rho(y) = \rho(xy)\)</span> ←頑張って計算すればできるが．．．</p>
+<h2 id="随伴表現">随伴表現</h2>
+<p><span class="math inline">\(\mathbb{H} \simeq \mathbb{R}^4\)</span> なので <span class="math inline">\(Ad(q) : v \mapsto q v q^{-1} , q \in U(1,\mathbb{H}) , v\in\mathbb{H}\)</span> によって、<span class="math inline">\(Ad : U(1,\mathbb{H}) \to GL(4,\mathbb{R})\)</span> を作れる</p>
+<p>[<strong>簡単に分かる</strong>]<span class="math inline">\(Ad(1) = 1\)</span> , <span class="math inline">\(Ad(q^{-1}) = Ad(q)^{-1}\)</span> , <span class="math inline">\(Ad(q_1q_2)=Ad(q_1)Ad(q_2)\)</span></p>
+<p><span class="math inline">\(Ad(q) = \left( \begin{array}{c|ccc} 1 &amp; 0 &amp; 0 &amp; 0 \\ \hline 0 &amp; r_{11} &amp; r_{12} &amp; r_{13} \\ 0 &amp; r_{21} &amp; r_{22} &amp; r_{23} \\ 0 &amp; r_{31} &amp; r_{32} &amp; r_{33} \end{array} \right)\)</span></p>
+<p>の形をしていて</p>
+<p><span class="math inline">\(\mathrm{Im}(\mathbb{H}) = \{x_1 \mathbf{i} + x_2 \mathbf{j} + x_3 \mathbf{k} \:\mid x_n \in \mathbb{R} , n=1,2,3 \} \simeq \mathbb{R}^3\)</span></p>
+<p>だから</p>
+<p><span class="math inline">\(Ad(q) : q \mapsto q v q^{-1} , q \in U(1,\mathbb{H}) ,v\in \mathrm{Im}(\mathbb{H})\)</span> によって、<span class="math inline">\(Ad : U(1,\mathbb{H}) \to GL(3,\mathbb{R})\)</span> を作れる</p>
+<p>自明に <span class="math inline">\(SO(3) \subset GL(3, \mathbb{R})\)</span> であるけど、 <span class="math inline">\(Ad(U(1,\mathbb{H})) = SO(3)\)</span> が成立する</p>
+<p>[<strong>自明じゃない特徴付け</strong>] <span class="math inline">\(Ad\)</span>は、<span class="math inline">\(U(1,\mathbb{H})\)</span> の(同値を除いて)唯一の三次元既約表現</p>
+<h2 id="随伴表現一般的な定義">随伴表現:一般的な&quot;定義&quot;</h2>
+<p><span class="math inline">\(\epsilon\)</span>を、<span class="math inline">\(\epsilon^2=0\)</span>である形式的な変数とする</p>
+<p><span class="math inline">\(X \in \mathfrak{u}(1,\mathbb{H}) \subset \mathbb{H}\Leftrightarrow 1 + \epsilon X \in U(1,\mathbb{H})\)</span> (&quot;定義&quot;)</p>
+<p><span class="math inline">\(\Leftrightarrow |1+\epsilon X|=1+\epsilon(X+\bar{X})=1 \Leftrightarrow X \in \mathrm{Im}(\mathbb{H})\)</span> なので <span class="math inline">\(\mathfrak{u}(1,\mathbb{H}) = \mathrm{Im}(\mathbb{H})\)</span></p>
+<p><span class="math inline">\(Ad : U(1,\mathbb{H}) \to End(\mathfrak{u}(1,\mathbb{H}))\)</span></p>
+<p><span class="math inline">\(Ad(q)v = q v q^{-1}\)</span> <span class="math inline">\((q \in U(1,\mathbb{H}) , v \in \mathfrak{u}(1,\mathbb{H}))\)</span></p>
+<p><span class="math inline">\(\space\)</span></p>
+<p><span class="math inline">\(X \in \mathfrak{so}(3) \subset Mat(3,\mathbb{R}) \Leftrightarrow 1 + \epsilon X \in SO(3)\)</span> (&quot;定義&quot;)</p>
+<p><span class="math inline">\(\Leftrightarrow (1+\epsilon X)^T(1+\epsilon X) = 1+\epsilon (X+X^{T})=1\)</span>, <span class="math inline">\(\det(1+\epsilon X) = 1 + \epsilon \cdot tr(X) = 1\)</span></p>
+<p><span class="math inline">\(\mathfrak{so}(3) = \{ X \in Mat(3,\mathbb{R}) \mid X+X^{T}=0 \}\)</span></p>
+<p><span class="math inline">\(Ad(q): v \mapsto q v q^{-1} \in \mathfrak{so}(3)\)</span> <span class="math inline">\((q \in SO(3) , v \in \mathfrak{so}(3))\)</span></p>
+<p><span class="math inline">\(\because)qq^{T}=1 \Rightarrow Ad(q)v + (Ad(q)v)^T = qvq^{-1} + (q v q^{-1})^{T} = q(v+v^{T})q^{T}=0\)</span></p>
+<h2 id="hopf-fibration-1">Hopf fibration</h2>
+<p><span class="math inline">\(U(1,\mathbb{H}) = \{ x \in \mathbb{H} \:\mid |x|=1 \}\)</span></p>
+<p><span class="math inline">\(S^3 = \{ (q_0,q_1,q_2,q_3) \in \mathbb{R}^4 \mid q_0^2+q_1^2+q_2^2+q_3^2=1 \}\)</span></p>
+<p><span class="math inline">\(U(1,\mathbb{H}) \leftrightarrow S^3\)</span> : 一対一対応</p>
+<p><span class="math inline">\(SO(3)\)</span> は二次元球面に作用する</p>
+<p><span class="math inline">\(S^2 = \{(x_1,x_2,x_3) \in \mathbb{R}^3 \mid x_1^2+x_2^2+x_3^2 = 1 \}\)</span></p>
+<p><span class="math inline">\(Ad : U(1,\mathbb{H}) \to SO(3)\)</span> を介して、<span class="math inline">\(U(1,\mathbb{H})\)</span>も<span class="math inline">\(S^2\)</span>に作用する</p>
+<p><span class="math inline">\(\left( \begin{array}{ccc} q_0^2 + q_1^2-q_2^2-q_3^2 &amp; 2(q_1q_2-q_0q_3) &amp; 2(q_0q_2+q_1q_3) \\ 2(q_0q_3+q_1q_2) &amp; q_0^2-q_1^2+q_2^2-q_3^2 &amp; 2(-q_0q_1+q_2q_3) \\ 2(q_1q_3 - q_0q_2) &amp; 2(q_2q_3 + q_0q_1) &amp; q_0^2-q_1^2-q_2^2+q_3^2 \end{array} \right) \left( \begin{array}{ccc} 1 \\ 0 \\ 0 \end{array} \right) = \left( \begin{array}{c} q_0^2 + q_1^2-q_2^2-q_3^2 \\ 2(q_0q_3+q_1q_2) \\ 2(q_1q_3 - q_0q_2) \end{array} \right)\)</span></p>
+<p><span class="math inline">\(q \in U(1,\mathbb{H}) \simeq S^3 \mapsto Ad(q)(1,0,0)^T \in S^2\)</span> によって、写像 <span class="math inline">\(S^3 \to S^2\)</span> が定まる（Hopf fibration,1931)</p>
+<p>[<strong>Hopf fibration</strong>] 現代幾何では、基本的な例 - <span class="math inline">\(S^2\)</span>上の非自明な主<span class="math inline">\(U(1)\)</span>束 - 高次ホモトピー群<span class="math inline">\(\pi_3(S^2)\)</span>の生成元</p>
+<h2 id="二次元表現とhopf-fibration">二次元表現とHopf fibration</h2>
+<p><span class="math inline">\(\psi(q_0 + q_1 \mathbf{i} + q_2 \mathbf{j} + q_3 \mathbf{k}) = \left( \begin{array}{cc} q_0 + q_1 \it{i} &amp; q_2 + q_3 \it{i} \\ -q_2+q_3 \it{i} &amp; q_0 - q_1 \it{i} \end{array} \right)\)</span></p>
+<p><span class="math inline">\(\psi: U(1,\mathbb{H}) \to GL(2,\mathbb{C})\)</span> は単射で、群準同型である</p>
+<p><span class="math inline">\(SU(2) = \{ U \in Mat(2,\mathbb{C}) \mid U^{\dagger}U = 1 , \det(U)=1 \} = \psi(U(1,\mathbb{H}))\)</span></p>
+<p><span class="math inline">\(S^3 = \{ (\alpha,\beta) \in \mathbb{C}^2 \mid |\alpha|^2 + |\beta|^2 = 1\} \mapsto \left(\begin{array}{cc} \alpha &amp; -\bar{\beta} \\ \beta &amp; \bar{\alpha} \end{array} \right) \in SU(2)\)</span> は1:1写像</p>
+<p><span class="math inline">\(U(1,\mathbb{H}) \to S^2\)</span>は既に作ったから</p>
+<p><span class="math inline">\(\pi: S^3 \to SU(2) \to U(1,\mathbb{H}) \to S^2\)</span> を以下のように作れることが分かる</p>
+<p><span class="math inline">\(\pi: (\alpha,\beta) \in S^3 \mapsto (|\alpha|^2 - |\beta|^2 ,-2 \mathrm{Im}(\bar{\alpha}\beta) , 2\mathrm{Re}(\bar{\alpha}\beta)) \in S^2\)</span></p>
+<p><span class="math inline">\(\pi^{-1}(1,0,0) = \{ (\alpha,0) \in \mathbb{C}^2 \mid |\alpha|=1 \} \subset S^3\)</span></p>
+<h2 id="pauli行列">Pauli行列</h2>
+<p>物理などでは、以下の形をよく使う。</p>
+<p><span class="math inline">\(\sigma_{1} = \left(\begin{array}{cc} 0 &amp; 1 \\ 1 &amp; 0 \end{array}\right)\)</span>, <span class="math inline">\(\sigma_{2} = \left(\begin{array}{cc} 0 &amp; -\textit{i} \\ \textit{i} &amp; 0 \end{array}\right)\)</span>, <span class="math inline">\(\sigma_{3} = \left(\begin{array}{cc} 1 &amp; 0 \\ 0 &amp; -1 \end{array}\right)\)</span></p>
+<p><span class="math inline">\((x_0,x_1,x_2,x_3) \mapsto x_0 I + \textit{i}x_1\sigma_1 + \textit{i}x_2\sigma_2 + \textit{i} x_3\sigma_3 = \left(\begin{array}{cc} x_0+\textit{i}x_3 &amp; x_2+\textit{i}x_1 \\ -x_2+\textit{i}x_1 &amp; x_0-\textit{i}x_3 \end{array}\right) = X\)</span></p>
+<p><span class="math inline">\(q \in U(1,\mathbb{H}) \mapsto Q = \left(\begin{array}{cc} q_0+\textit{i} q_3 &amp; q_2+\textit{i}q_1 \\ -q_2+\textit{i}q_1 &amp; q_0-\textit{i}q_3 \end{array}\right) \in SU(2)\)</span></p>
+<p>と <span class="math inline">\(X \mapsto QXQ^{-1}\)</span> から <span class="math inline">\(R:U(1,\mathbb{H}) \to SO(3)\)</span> を以下のようにも作れる</p>
+<p><span class="math inline">\(R(q) = \left( \begin{array}{ccc} q_0^2 + q_1^2-q_2^2-q_3^2 &amp; 2(q_0q_3+q_1q_2) &amp; 2(-q_0q_2+q_1q_3) \\ 2(-q_0q_3+q_1q_2) &amp; q_0^2-q_1^2+q_2^2-q_3^2 &amp; 2(q_0q_1+q_2q_3) \\ 2(q_1q_3 + q_0q_2) &amp; 2(q_2q_3 - q_0q_1) &amp; q_0^2-q_1^2-q_2^2+q_3^2 \end{array} \right)\)</span></p>
+<p><span class="math inline">\((\alpha,\beta) = (q_0 + \textit{i}q_3 , -q_2+\textit{i}q_1)\)</span> とすれば</p>
+<p><span class="math inline">\(q \mapsto R(q) (0,0,1)^T = (2\mathrm{Re}(\bar{\alpha}\beta) , 2\mathrm{Im}(\bar{\alpha}\beta),|\alpha|^2-|\beta|^2) \in S^2\)</span></p>
+<h2 id="準備複素射影直線">準備:複素射影直線</h2>
+<p><span class="math inline">\(\mathbb{P}^1(\mathbb{C}) = \mathbb{C} \cup \{\infty\}\)</span></p>
+<p>[<strong>fact</strong>] <span class="math inline">\(\mathbb{P}^1(\mathbb{C}) \simeq S^2\)</span></p>
+<p><span class="math inline">\(f : \mathbb{P}^1(\mathbb{C}) \to S^2\)</span></p>
+<p><span class="math inline">\(f(z) = \begin{cases} (0,0,-1) &amp; (z=\infty) \\ \left(\dfrac{2 \mathrm{Re}(z)}{1+|z|^2} ,\dfrac{2 \mathrm{Im}(z)}{1+|z|^2},\dfrac{1-|z|^2}{1+|z|^2} \right) &amp; (z \in \mathbb{C}) \end{cases}\)</span></p>
+<p><span class="math inline">\(g : S^2 \to \mathbb{P}^1(\mathbb{C})\)</span></p>
+<p><span class="math inline">\(g(x_1,x_2,x_3) = \begin{cases} \infty &amp; (x_3=-1) \\ \dfrac{x_1}{1+x_3} + \dfrac{x_2}{1+x_3} \textit{i} &amp; (x_3 \neq -1) \end{cases}\)</span></p>
+<h2 id="再びhopf-fibration">再びHopf fibration</h2>
+<p><span class="math inline">\(\pi: (\alpha,\beta) \in S^3 \mapsto (2\mathrm{Re}(\bar{\alpha}\beta),2 \mathrm{Im}(\bar{\alpha}\beta),|\alpha|^2 - |\beta|^2) \in S^2\)</span></p>
+<p><span class="math inline">\(s : \mathbb{C}^2 \setminus \{(0,0)\} \to \mathbb{P}^1(\mathbb{C})\)</span></p>
+<p><span class="math inline">\(s(z_1,z_2) = \begin{cases} z_2/z_1 &amp; (z_1 \neq 0) \\ \infty &amp; (z_1=0) \end{cases}\)</span></p>
+<p><span class="math inline">\(f : \mathbb{P}^1(\mathbb{C}) \to S^2\)</span></p>
+<p><span class="math inline">\(f(z) = \begin{cases} \left(\dfrac{2 \mathrm{Re}(z)}{1+|z|^2} ,\dfrac{2 \mathrm{Im}(z)}{1+|z|^2},\dfrac{1-|z|^2}{1+|z|^2} \right) &amp; (z \in \mathbb{C}) \\ (0,0,-1) &amp; (z=\infty) \end{cases}\)</span></p>
+<p><span class="math inline">\(f \circ s(z_1,z_2) = \left(\dfrac{2 \mathrm{Re}(\bar{z_1}z_2)}{|z_1|^2+|z_2|^2} ,\dfrac{2 \mathrm{Im}(\bar{z_1}z_2)}{|z_1|^2+|z_2|^2} ,\dfrac{|z_1|^2-|z_2|^2}{|z_1|^2+|z_2|^2}\right)\)</span></p>
+<p><span class="math inline">\((\alpha,\beta) \in S^3 = \{ (\alpha,\beta) \in \mathbb{C}^2 \mid |\alpha|^2 + |\beta|^2 = 1\}\)</span> に対して</p>
+<p><span class="math inline">\(\pi(\alpha,\beta) = f \circ s(\alpha,\beta)\)</span></p>
+<h2 id="quaternionic-hopf-fibration">quaternionic Hopf fibration</h2>
+<p>同様に、 <span class="math inline">\(S^7 \subset \mathbb{H}^2 \setminus \{(0,0)\}\)</span> と見なすことが出来</p>
+<p><span class="math inline">\(\mathbb{P}^1(\mathbb{H}) = \mathbb{H} \cup \{\infty\}\)</span> として</p>
+<p><span class="math inline">\(s_{\mathbb{H}} : \mathbb{H}^2 \setminus \{(0,0)\}\to \mathbb{P}^1(\mathbb{H})\)</span></p>
+<p><span class="math inline">\(F_{\mathbb{H}} : \mathbb{P}^1(\mathbb{H}) \simeq S^4\)</span></p>
+<p>が定義でき、<span class="math inline">\(F_{\mathbb{H}} \circ s_{\mathbb{H}} : \mathbb{H}^2 \setminus \{(0,0)\} \to S^4\)</span> を<span class="math inline">\(S^7\)</span>に制限することで、</p>
+<p><span class="math inline">\(\pi_{\mathbb{H}} : S^7 \to S^4\)</span></p>
+<p><span class="math inline">\(\pi_{\mathbb{H}}(z_1,z_2) = (|z_1|^2-|z_2|^2 , 2\bar{z_1}z_2) \in \mathbb{R} \times \mathbb{H} \simeq \mathbb{R}^5\)</span></p>
+<p>が得られる。</p>
+<p>任意の <span class="math inline">\(p \in S^4\)</span>に対して <span class="math inline">\(\pi_{\mathbb{H}}^{-1}(p) \simeq U(1,\mathbb{H}) \simeq S^3\)</span></p>
+<h2 id="isomorphisms">isomorphisms</h2>
+<p><span class="math inline">\(\begin{cases} GL(1,\mathbb{R}) \simeq GL_{+}(1,\mathbb{R}) \times \{\pm 1\} &amp; , x \mapsto \left(|x|,x/|x| \right) \\ GL(1,\mathbb{C}) \simeq GL_{+}(1,\mathbb{R}) \times U(1) &amp; , x \mapsto \left(|x|,x/|x|\right) \\ GL(1,\mathbb{H}) \simeq GL_{+}(1,\mathbb{R}) \times U(1,\mathbb{H}) &amp; , x \mapsto \left(|x|,x/|x|\right) \end{cases}\)</span></p>
+<p><span class="math inline">\(\mathbb{C}^2\setminus\{\mathbf{0}\} \to S^3 \simeq (\mathbb{C}^2\setminus\{\mathbf{0}\})/GL_{+}(1,\mathbb{R}) \to S^2 \simeq \mathbb{P}^{1}(\mathbb{C}) \simeq (\mathbb{C}^2\setminus\{\mathbf{0}\})/GL(1,\mathbb{C}) \simeq S^3/U(1)\)</span></p>
+<p><span class="math inline">\(\mathbb{H}^2\setminus\{\mathbf{0}\} \to S^7 \simeq (\mathbb{H}^2\setminus\{\mathbf{0}\})/GL_{+}(1,\mathbb{R}) \to S^4 \simeq \mathbb{P}^{1}(\mathbb{H}) \simeq (\mathbb{H}^2\setminus\{\mathbf{0}\})/GL(1,\mathbb{H}) \simeq S^7/U(1,\mathbb{H})\)</span></p>
+<p>[<strong>一般化</strong>]</p>
+<p><span class="math inline">\(\begin{cases} S^{n}/\{\pm 1\} \simeq \mathbb{P}^{n}(\mathbb{R}) \\ S^{2n+1}/U(1) \simeq \mathbb{P}^{n}(\mathbb{C}) \\ S^{4n+3}/U(1,\mathbb{H}) \simeq \mathbb{P}^{n}(\mathbb{H}) \end{cases}\)</span></p>
+<p>[<strong>おまけ</strong>]以下は全部2:1写像</p>
+<p><span class="math inline">\(\begin{cases} SL(2,\mathbb{R}) \to SO(2,1)=\mathrm{Conf}(S^1) \\ SL(2,\mathbb{C}) \to SO(3,1)=\mathrm{Conf}(S^2) \\ SL(2,\mathbb{H}) \to SO(5,1)=\mathrm{Conf}(S^4) \end{cases}\)</span></p>

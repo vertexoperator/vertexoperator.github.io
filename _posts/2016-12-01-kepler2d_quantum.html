@@ -1,0 +1,99 @@
+---
+layout: layout2
+title: 2次元量子Kepler系の束縛状態
+---
+<h1 id="次元量子kepler系の束縛状態">2次元量子Kepler系の束縛状態</h1>
+<p>二次元量子Kepler系を解くことを考える。シュレディンガー方程式は<br> <span class="math inline">\(\hat{H} \Psi = E \Psi\)</span></p>
+<p><span class="math inline">\(\hat{H} = -\dfrac{\hbar^2}{2 \mu} ( \dfrac{\partial^2}{\partial x_1^2} + \dfrac{\partial^2}{\partial x_2^2} ) - \dfrac{k}{r}\)</span></p>
+<p><span class="math inline">\(r = \sqrt{x_1^2+x_2^2}\)</span> となる。</p>
+<p>束縛状態と散乱状態があるが、まずは、束縛状態。解き方は、いくつもあるが、比較的ポピュラーでない2つの方法を取り上げる</p>
+<h2 id="解法1levi-civita変換により量子調和振動子の計算に帰着する">解法1)Levi-Civita変換により、量子調和振動子の計算に帰着する</h2>
+<p>
+<p>Levi-Civita変換の論文は1920年に出版されているので、最初は古典的なKepler系に対するものとして発見されたのだと思う。数十年後に、Kustaanheimo-Stiefel変換と呼ばれるようになる、3次元での類似物が発見された。</p>
+<p><span class="math inline">\(x_1 = \dfrac{1}{2}(u_1^2 - u_2^2) , x_2=u_1u_2\)</span>という変数変換を行うと、<span class="math inline">\(r=\dfrac{1}{2}(u_1^2+u_2^2)=u^2/2\)</span>で、シュレディンガー方程式は</p>
+<p><span class="math inline">\(\left[ -\dfrac{\hbar^2}{2 \mu} \dfrac{1}{u^2} (\dfrac{\partial^2}{\partial u_1^2} + \dfrac{\partial^2}{\partial u_2^2}) - \dfrac{2 k}{u^2} \right] \Psi = E\Psi\)</span></p>
+<p>となる。両辺に<span class="math inline">\(r = u^2/2\)</span>をかけて、移項すると、次の形の式を得る</p>
+<p><span class="math inline">\(\left[ -\dfrac{\hbar^2}{4 \mu} (\dfrac{\partial^2}{\partial u_1^2} + \dfrac{\partial^2}{\partial u_2^2}) - \dfrac{E}{2} u^2 \right]\Psi = k \Psi\)</span></p>
+<p>これは、量子調和振動子の定常シュレディンガー方程式と同じ形をしている。<span class="math inline">\(E \lt 0\)</span>の時</p>
+<p><span class="math inline">\(M=2\mu , \omega = \sqrt{\dfrac{-E}{2 \mu}} , \epsilon = k\)</span></p>
+<p>と置くと</p>
+<p><span class="math inline">\(\left( - \dfrac{\hbar^2}{2 M} (\dfrac{\partial^2}{\partial u_1^2} + \dfrac{\partial^2}{\partial u_2^2}) + \dfrac{1}{2} M \omega^2 u^2 \right) \Psi = \epsilon \Psi\)</span></p>
+<p>で、調和振動子の場合<span class="math inline">\(\epsilon = (n_1 + n_2 + 1)\hbar \omega\)</span> <span class="math inline">\((n_1,n_2=0,1,2,\cdots)\)</span>の時のみ解を持つ。</p>
+<p>ところで、任意の<span class="math inline">\(n_1,n_2\)</span>の組に対する調和振動子の固有状態が、そのまま量子Kepler系の固有状態となるわけではない。というのも、<span class="math inline">\((u_1,u_2) \to (-u_1,-u_2)\)</span>という変換によって、<span class="math inline">\(x_1,x_2\)</span>は不変であるから、このような変換によって波動関数の値が変わってしまうようだと、量子Kepler系の波動関数と見なすことはできなくなる。つまり、調和振動子の波動関数はとして偶関数であることが、量子Kepler系の波動関数とみなせるために必要である(これは十分条件でもあるが、それを示すためはは実際に波動関数を計算してしまうのが早い。表現論的には振動子表現がシンプレティック代数の表現として既約でなく、2つの規約表現の直和に分解することに由来する)。偶関数であるためには、<span class="math inline">\(n_1+n_2\)</span>が偶数であればよい。<span class="math inline">\(n_1+n_2=2n\)</span>とすると</p>
+<p><span class="math inline">\(E = -\dfrac{2 \mu k^2}{(2 n + 1)^2 \hbar^2}\)</span> <span class="math inline">\((n=0,1,2,\cdots)\)</span></p>
+<p>となる。<span class="math inline">\(n\)</span>が量子Kepler系の主量子数で、<span class="math inline">\(2n=n_1+n_2\)</span>の非負整数解の個数分だけ縮退しているので、<span class="math inline">\(2n+1\)</span>重に縮退している。基底状態は、規格化定数を除けば</p>
+<p><span class="math inline">\(\Psi_0(x) = \exp( -\dfrac{2 \mu k}{\hbar^2} r)\)</span></p>
+<p>となる。</p>
+<h2 id="解法2spectrum-generating-algebraによる方法">解法2)spectrum generating algebraによる方法</h2>
+<p>多分、発見者はBarutら(1971年頃?)。3次元で考えられたが、任意次元で同様の計算ができる。</p>
+<p>以下の10個の微分作用素を考えると、これらは閉じたLie環をなす(証明略)。</p>
+<p><span class="math inline">\(L = x_1 \dfrac{\partial}{\partial x_2} - x_2 \dfrac{\partial}{\partial x_1}\)</span></p>
+<p><span class="math inline">\(A_1 = \dfrac{1}{2} x_1 \left( \dfrac{\partial^2}{\partial x_1^2} + \dfrac{\partial^2}{\partial x_2^2} \right) - \dfrac{\partial}{\partial x_1} \cdot (x_1 \dfrac{\partial}{\partial x_1} + x_2 \dfrac{\partial}{\partial x_2}) + \dfrac{1}{2} x_1 + \dfrac{1}{2} \dfrac{\partial}{\partial x_1}\)</span></p>
+<p><span class="math inline">\(A_2 = \dfrac{1}{2} x_2 \left( \dfrac{\partial^2}{\partial x_1^2} + \dfrac{\partial^2}{\partial x_2^2} \right) - \dfrac{\partial}{\partial x_2} \cdot (x_1 \dfrac{\partial}{\partial x_1} + x_2 \dfrac{\partial}{\partial x_2}) + \dfrac{1}{2} x_2 + \dfrac{1}{2} \dfrac{\partial}{\partial x_2}\)</span></p>
+<p><span class="math inline">\(B_1 = \dfrac{1}{2} x_1 \left( \dfrac{\partial^2}{\partial x_1^2} + \dfrac{\partial^2}{\partial x_2^2} \right) - \dfrac{\partial}{\partial x_1} \cdot (x_1 \dfrac{\partial}{\partial x_1} + x_2 \dfrac{\partial}{\partial x_2}) - \dfrac{1}{2} x_1 + \dfrac{1}{2} \dfrac{\partial}{\partial x_1}\)</span></p>
+<p><span class="math inline">\(B_2 = \dfrac{1}{2} x_2 \left( \dfrac{\partial^2}{\partial x_1^2} + \dfrac{\partial^2}{\partial x_2^2} \right) - \dfrac{\partial}{\partial x_2} \cdot (x_1 \dfrac{\partial}{\partial x_1} + x_2 \dfrac{\partial}{\partial x_2}) - \dfrac{1}{2} x_2 + \dfrac{1}{2} \dfrac{\partial}{\partial x_2}\)</span></p>
+<p><span class="math inline">\(T_1 = -\dfrac{r}{2}\left( \dfrac{\partial^2}{\partial x_1^2} + \dfrac{\partial^2}{\partial x_2^2} \right) - \dfrac{r}{2}\)</span></p>
+<p><span class="math inline">\(T_2 = x_1 \dfrac{\partial}{\partial x_1} + x_2 \dfrac{\partial}{\partial x_2} + \dfrac{1}{2}\)</span></p>
+<p><span class="math inline">\(T_3 = -\dfrac{r}{2}\left( \dfrac{\partial^2}{\partial x_1^2} + \dfrac{\partial^2}{\partial x_2^2} \right) + \dfrac{r}{2}\)</span></p>
+<p><span class="math inline">\(\Gamma_1 = r \dfrac{\partial}{\partial x_1}\)</span> <span class="math inline">\(\Gamma_2 = r \dfrac{\partial}{\partial x_2}\)</span></p>
+<p>量子Kepler系のシュレディンガー方程式を</p>
+<p><span class="math inline">\(r(\hat{H} - E)\Psi = 0\)</span></p>
+<p>と置くと <span class="math inline">\(r(\hat{H} - E) = \dfrac{\hbar^2}{2 \mu}(T_1 + T_3) - k - E (T_3 - T_1)\)</span></p>
+<p>なので</p>
+<p><span class="math inline">\(\left[ \dfrac{\hbar^2}{2 \mu}(T_1 + T_3) + E (T_1 - T_3) - k \right] \Psi = 0\)</span></p>
+<p>と書くことができる。</p>
+<p><span class="math inline">\(T_1,T_2,T_3\)</span>が<span class="math inline">\(su(1,1)\)</span>代数をなす(<span class="math inline">\([T_1,T_2]=T_3 , [T_2,T_3]=-T_1 , [T_3,T_1]=T_2\)</span>)ことから、有名な公式</p>
+<p><span class="math inline">\(e^A B e^{-A} = e^{ad(A)} B\)</span></p>
+<p>を使って</p>
+<p><span class="math inline">\(e^{\theta T_2} T_1 e^{-\theta T_2} = T_1 cosh(\theta) + T_3 sinh(\theta)\)</span></p>
+<p><span class="math inline">\(e^{\theta T_2} T_3 e^{-\theta T_2} = T_1 sinh(\theta) + T_3 cosh(\theta)\)</span></p>
+<p>となる。このことを利用して、量子Kepler系のシュレディンガー方程式を<span class="math inline">\(T_1\)</span>や<span class="math inline">\(T_3\)</span>の固有値問題に帰着させることができる。より初等的な見方としては、<span class="math inline">\(e^{\theta T_2}\)</span>はスケーリング変換であり、適当なスケーリング変換によって、<span class="math inline">\(E \lt 0\)</span>の時は<span class="math inline">\(T_3\)</span>の固有値問題に、<span class="math inline">\(E \gt 0\)</span>の時は<span class="math inline">\(T_1\)</span>の固有値問題に帰着できるというだけのことである。調和振動子のシュレディンガー方程式を解く時には、スケーリング変換をほとんど空気のように行っているに過ぎない。また、ここでやっていることは、本質的には、解法1と同じである。<span class="math inline">\(r(\hat{H} - E)\Psi = 0\)</span>をLevi-Civita変換すると、これは解法1で見た調和振動子の式と同一になる。</p>
+<p>spectrum generating algebraの作用素もLevi-Civita変換すると、以下のような式を得る。</p>
+<p><span class="math inline">\(L = \dfrac{1}{2} \left(u_2 \dfrac{\partial}{\partial u_1} - u_1 \dfrac{\partial}{\partial u_2} \right)\)</span></p>
+<p><span class="math inline">\(T_1 = -\dfrac{1}{4} \left(\dfrac{\partial^2}{\partial u_1^2} + \dfrac{\partial^2}{\partial u_2^2} \right) - \dfrac{1}{4}(u_1^2+u_2^2)\)</span></p>
+<p><span class="math inline">\(T_2 = \dfrac{1}{2}(u_1 \dfrac{\partial}{\partial u_1} + u_2 \dfrac{\partial}{\partial u_2} + 1)\)</span></p>
+<p><span class="math inline">\(T_3 = -\dfrac{1}{4} \left(\dfrac{\partial^2}{\partial u_1^2} + \dfrac{\partial^2}{\partial u_2^2} \right) + \dfrac{1}{4}(u_1^2+u_2^2)\)</span></p>
+<p><span class="math inline">\(\Gamma_1 = \dfrac{1}{2} \left( u_1 \dfrac{\partial}{\partial u_1} - u_2 \dfrac{\partial}{\partial u_2} \right)\)</span></p>
+<p><span class="math inline">\(\Gamma_2 = \dfrac{1}{2} \left( u_2 \dfrac{\partial}{\partial u_1} + u_1 \dfrac{\partial}{\partial u_2} \right)\)</span></p>
+<p><span class="math inline">\(A_1 = -\dfrac{1}{4} \left(\dfrac{\partial^2}{\partial u_1^2} - \dfrac{\partial^2}{\partial u_2^2} \right) + \dfrac{1}{4}(u_1^2-u_2^2)\)</span></p>
+<p><span class="math inline">\(A_2 = -\dfrac{1}{2} \dfrac{\partial^2}{\partial u_1 \partial u_2} + \dfrac{1}{2}u_1 u_2\)</span></p>
+<p><span class="math inline">\(B_1 = -\dfrac{1}{4} \left(\dfrac{\partial^2}{\partial u_1^2} - \dfrac{\partial^2}{\partial u_2^2} \right) - \dfrac{1}{4}(u_1^2-u_2^2)\)</span></p>
+<p><span class="math inline">\(B_2 = -\dfrac{1}{2} \dfrac{\partial^2}{\partial u_1 \partial u_2} - \dfrac{1}{2}u_1 u_2\)</span></p>
+<p>調和振動子の座標では、<span class="math inline">\(T_3\)</span>の固有状態はHermite多項式<span class="math inline">\(H_n(x)\)</span>を使って</p>
+<p><span class="math inline">\(\phi_{nm}(u) = H_n(u_1) H_m(u_2) e^{-(u_1^2+u_2^2)/2}\)</span></p>
+<p>と書ける。</p>
+<p><span class="math inline">\(T_3 \cdot \phi_{nm}(u) = \dfrac{n+m+2}{2} \phi_{nm}(u)\)</span></p>
+<p>で特に</p>
+<p><span class="math inline">\(T_3 \cdot \phi_{00} = \dfrac{1}{2} \phi_{00}\)</span></p>
+<p>が、最小の固有値を持つ固有状態である。Kepler系の座標で書くならば、<span class="math inline">\(e^{-r}\)</span>に相当する。</p>
+<p>上記spectrum generating algebraの作用によって、n+mは2ずつ変動するので、<span class="math inline">\(\phi_{00}\)</span>に作用させて得られるのは、偶関数のみ(<span class="math inline">\(n+m\)</span>が偶数の<span class="math inline">\(\phi_{nm}\)</span>の線型結合で書ける)である。作用の仕方を具体的に書いておく(面倒なので、ブラ・ケット記法を用いる)</p>
+<p><span class="math inline">\(T_3|n,m\rangle = (n+m+1)/2|n,m\rangle\)</span></p>
+<p><span class="math inline">\(L |n,m\rangle = (n/2)|n-1,m+1\rangle - (m/2)|n+1,m-1\rangle\)</span></p>
+<p><span class="math inline">\(A_1|n,m\rangle = (n-m)/2|n,m\rangle\)</span></p>
+<p><span class="math inline">\(A_2|n,m\rangle = (n/2)|n-1,m+1\rangle + (m/2)|n+1,m-1\rangle\)</span></p>
+<p><span class="math inline">\((G_2+B_2)|n,m\rangle = -\frac{1}{2}|n+1,m+1\rangle\)</span></p>
+<p><span class="math inline">\((G_1+B_1)|n,m\rangle = -\frac{1}{4}|n+2,m\rangle + \frac{1}{4}|n,m+2\rangle\)</span></p>
+<p><span class="math inline">\((T_1+T_2)|n,m\rangle = -\frac{1}{4}|n+2,m\rangle - \frac{1}{4}|n,m+2\rangle\)</span></p>
+<p><span class="math inline">\((G_2-B_2)|n,m\rangle = 2nm|n-1,m-1\rangle\)</span></p>
+<p><span class="math inline">\((G_1-B_1)|n,m\rangle = n(n-1)|n-2,m\rangle - m(m-1)|n,m-2\rangle\)</span></p>
+<p><span class="math inline">\((T_1-T_2)|n,m\rangle = -n(n-1)|n-2,m\rangle - m(m-1)|n,m-2\rangle\)</span></p>
+<p>この式を眺めれば、<span class="math inline">\(|0,0\rangle\)</span>から始めて、<span class="math inline">\(n+m\)</span>が偶数の<span class="math inline">\(|n,m\rangle\)</span>が全て得られることが分かる。</p>
+<p>上記spectrum generating algebraの基底のうち、<span class="math inline">\(T_3\)</span>と可換なのは<span class="math inline">\(A_1,A_2,L\)</span>であり、これら3つの元は複素Lie環<span class="math inline">\(so(3,\mathbf{C})\)</span>と同型なLie環の基底となり、</p>
+<p><span class="math inline">\(C = A_1^2 + A_2^2 - L^2\)</span></p>
+<p>がCasimir作用素となっている。また、</p>
+<p><span class="math inline">\(C = T_3^2 - \dfrac{1}{4}\)</span></p>
+<p>という関係式が成立している。Cartan対合の固定点となる実Lie環を決める。<span class="math inline">\(\phi_{nm}\)</span>が直交するようなHermite内積を入れると、明らかに</p>
+<p><span class="math inline">\((\phi_{n&#39;,m&#39;} , A_1 \phi_{n,m}) + (A_1 \phi_{n&#39;,m&#39;} , \phi_{n,m}) \neq 0\)</span></p>
+<p>である。<span class="math inline">\(\sqrt{-1}A_1 , \sqrt{-1}A_2,L\)</span>は閉じた実Lie環をなし、<span class="math inline">\(so(3)\)</span>と同型で、かつ、ユニタリー表現として作用しているので、これが求めるLie環である</p>
+<p><span class="math inline">\(so(3)\)</span>の既約ユニタリー表現はよく知られている通り、全て有限次元である。<span class="math inline">\(n+m\)</span>が偶数であるような<span class="math inline">\(\phi_{nm}\)</span>で張られるベクトル空間を考えると、これはspectrum generating algebraの既約表現空間となっているが、これをこの<span class="math inline">\(so(3)\)</span>に制限して既約分解すると、各既約表現空間上では<span class="math inline">\(T_1\)</span>は定数倍で作用する。この分解の仕方は、<span class="math inline">\(so(3)\)</span>の<span class="math inline">\(1,3,5,\cdots,(2n+1),\cdots\)</span>次元既約表現が一回ずつ出てくるという形になる。これが<span class="math inline">\(T_1\)</span>が離散スペクトルを持つことの表現論的な理解となる。</p>
+<p>同様に<span class="math inline">\(T_1\)</span>と可換なのは<span class="math inline">\(B_1,B_2,L\)</span>であり、これら3つの元も複素Lie環<span class="math inline">\(so(3,\mathbf{C})\)</span>と同型なLie環の基底となり、</p>
+<p><span class="math inline">\(B_1^2+B_2^2+L^2 = T_1^2 + \dfrac{1}{4}\)</span></p>
+<p>という関係がある。こちらは散乱状態と関係してくる。</p>
+<p>ついでに、<span class="math inline">\(T_2\)</span>についても</p>
+<p><span class="math inline">\(\left[T_2,\Gamma_1 \right] = \left[T_2 , \Gamma_2 \right] = \left[T_2 , L \right]= 0\)</span></p>
+<p>かつ</p>
+<p><span class="math inline">\(\Gamma_1^2 + \Gamma_2^2 - L^2 = T_2^2 - \dfrac{1}{4}\)</span></p>
+<p>という関係が成立している。形式的には</p>
+<p><span class="math inline">\(T_2 (u_1^2 + u_2^2)^{s/2} = \dfrac{s+1}{2} (u_1^2 + u_2^2)^{s/2}\)</span></p>
+<p><span class="math inline">\(L (u_1^2 + u_2^2)^{s/2} = 0\)</span></p>
+<p>なので、<span class="math inline">\((u_1^2 + u_2^2)^{s/2}\)</span>に<span class="math inline">\(\Gamma_1,\Gamma_2\)</span>を作用させていくと、<span class="math inline">\(\Gamma_1,\Gamma_2,L\)</span>のなすLie環の既約表現がひとつ得られる。任意の<span class="math inline">\(s \in \mathbf{C}\)</span>について、ユニタリーとなるわけではない<br></p>
