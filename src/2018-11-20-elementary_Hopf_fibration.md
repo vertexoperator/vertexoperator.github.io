@@ -124,8 +124,11 @@ $S^3 \to S^2$
 が定まる（Hopf fibration,1931)
 
 [__Hopf fibration__] 現代幾何では、基本的な例
+
 - $S^2$上の非自明な主$U(1)$束
+
 - 高次ホモトピー群$\pi_3(S^2)$の生成元
+
 
 ## 二次元表現とHopf fibration
 $\psi(q_0 + q_1 \mathbf{i} + q_2 \mathbf{j} + q_3 \mathbf{k}) = \left( \begin{array}{cc} q_0 + q_1 \it{i} & q_2 + q_3 \it{i} \\ -q_2+q_3 \it{i} & q_0 - q_1 \it{i} \end{array} \right)$
