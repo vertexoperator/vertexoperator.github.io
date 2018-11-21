@@ -8,7 +8,6 @@ title: 2次元量子Kepler系の束縛状態
 <p><span class="math inline">\(r = \sqrt{x_1^2+x_2^2}\)</span> となる。</p>
 <p>束縛状態と散乱状態があるが、まずは、束縛状態。解き方は、いくつもあるが、比較的ポピュラーでない2つの方法を取り上げる</p>
 <h2 id="解法1levi-civita変換により量子調和振動子の計算に帰着する">解法1)Levi-Civita変換により、量子調和振動子の計算に帰着する</h2>
-<p>
 <p>Levi-Civita変換の論文は1920年に出版されているので、最初は古典的なKepler系に対するものとして発見されたのだと思う。数十年後に、Kustaanheimo-Stiefel変換と呼ばれるようになる、3次元での類似物が発見された。</p>
 <p><span class="math inline">\(x_1 = \dfrac{1}{2}(u_1^2 - u_2^2) , x_2=u_1u_2\)</span>という変数変換を行うと、<span class="math inline">\(r=\dfrac{1}{2}(u_1^2+u_2^2)=u^2/2\)</span>で、シュレディンガー方程式は</p>
 <p><span class="math inline">\(\left[ -\dfrac{\hbar^2}{2 \mu} \dfrac{1}{u^2} (\dfrac{\partial^2}{\partial u_1^2} + \dfrac{\partial^2}{\partial u_2^2}) - \dfrac{2 k}{u^2} \right] \Psi = E\Psi\)</span></p>
@@ -19,7 +18,7 @@ title: 2次元量子Kepler系の束縛状態
 <p>と置くと</p>
 <p><span class="math inline">\(\left( - \dfrac{\hbar^2}{2 M} (\dfrac{\partial^2}{\partial u_1^2} + \dfrac{\partial^2}{\partial u_2^2}) + \dfrac{1}{2} M \omega^2 u^2 \right) \Psi = \epsilon \Psi\)</span></p>
 <p>で、調和振動子の場合<span class="math inline">\(\epsilon = (n_1 + n_2 + 1)\hbar \omega\)</span> <span class="math inline">\((n_1,n_2=0,1,2,\cdots)\)</span>の時のみ解を持つ。</p>
-<p>ところで、任意の<span class="math inline">\(n_1,n_2\)</span>の組に対する調和振動子の固有状態が、そのまま量子Kepler系の固有状態となるわけではない。というのも、<span class="math inline">\((u_1,u_2) \to (-u_1,-u_2)\)</span>という変換によって、<span class="math inline">\(x_1,x_2\)</span>は不変であるから、このような変換によって波動関数の値が変わってしまうようだと、量子Kepler系の波動関数と見なすことはできなくなる。つまり、調和振動子の波動関数はとして偶関数であることが、量子Kepler系の波動関数とみなせるために必要である(これは十分条件でもあるが、それを示すためはは実際に波動関数を計算してしまうのが早い。表現論的には振動子表現がシンプレティック代数の表現として既約でなく、2つの規約表現の直和に分解することに由来する)。偶関数であるためには、<span class="math inline">\(n_1+n_2\)</span>が偶数であればよい。<span class="math inline">\(n_1+n_2=2n\)</span>とすると</p>
+<p>ところで、任意の<span class="math inline">\(n_1,n_2\)</span>の組に対する調和振動子の固有状態が、そのまま量子Kepler系の固有状態となるわけではない。というのも、<span class="math inline">\((u_1,u_2) \to (-u_1,-u_2)\)</span>という変換によって、<span class="math inline">\(x_1,x_2\)</span>は不変であるから、このような変換によって波動関数の値が変わってしまうようだと、量子Kepler系の波動関数と見なすことはできなくなる。つまり、調和振動子の波動関数はとして偶関数であることが、量子Kepler系の波動関数とみなせるために必要である(これは十分条件でもあるが、それを示すためはは実際に波動関数を計算してしまうのが早い。表現論的には振動子表現がシンプレティック代数の表現として既約でなく、2つの既約表現の直和に分解することに由来する)。偶関数であるためには、<span class="math inline">\(n_1+n_2\)</span>が偶数であればよい。<span class="math inline">\(n_1+n_2=2n\)</span>とすると</p>
 <p><span class="math inline">\(E = -\dfrac{2 \mu k^2}{(2 n + 1)^2 \hbar^2}\)</span> <span class="math inline">\((n=0,1,2,\cdots)\)</span></p>
 <p>となる。<span class="math inline">\(n\)</span>が量子Kepler系の主量子数で、<span class="math inline">\(2n=n_1+n_2\)</span>の非負整数解の個数分だけ縮退しているので、<span class="math inline">\(2n+1\)</span>重に縮退している。基底状態は、規格化定数を除けば</p>
 <p><span class="math inline">\(\Psi_0(x) = \exp( -\dfrac{2 \mu k}{\hbar^2} r)\)</span></p>
