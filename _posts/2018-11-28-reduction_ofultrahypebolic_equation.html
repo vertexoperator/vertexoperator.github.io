@@ -1,0 +1,92 @@
+---
+layout: layout2
+title: 
+---
+<h1 id="超双曲方程式から超幾何型関数への簡約">超双曲方程式から超幾何型関数への簡約</h1>
+<h2 id="参考文献">参考文献</h2>
+<p>Twistor Theory of the Airy Equation</p>
+<p><a href="https://arxiv.org/abs/1401.0025" class="uri">https://arxiv.org/abs/1401.0025</a></p>
+<h2 id="airy関数の場合">Airy関数の場合</h2>
+<p>論文の座標との対応は <span class="math inline">\((x_1,x_2,x_3,x_4) = (\tilde{z},\tilde{w},w,z)\)</span></p>
+<p><span class="math inline">\(\phi(x_1,x_2,x_3,x_4) = \exp \left( x_3-x_2(x_4-x_1)-\dfrac{2}{3}x_2^3 \right)F(z)\)</span></p>
+<p><span class="math inline">\(z = x_1 - x_4 - x_2^2\)</span></p>
+<p><span class="math inline">\(\begin{cases} X=\partial_3 \\ Y=\partial_1+\partial_4 \\ Z=(x_4-x_1)\partial_3 + x_2(\partial_1-\partial_4) + \partial_2 \end{cases}\)</span></p>
+<p><span class="math inline">\((\partial_2 \partial_3 - \partial_1\partial_4)\phi = \exp \left( x_3-x_2(x_4-x_1)-\dfrac{2}{3}x_2^3 \right)(F&#39;&#39;(z)+zF(z))\)</span></p>
+<p>なので、<span class="math inline">\(\phi\)</span>が超双曲方程式を満たすことと、<span class="math inline">\(F\)</span>がAiry関数であることは同値。 加えて、<span class="math inline">\(\phi\)</span>を上の形に取るために、付加的な条件が付く。</p>
+<p><span class="math inline">\(X(\phi)=\phi\)</span>,<span class="math inline">\(Y(\phi)=0,Z(\phi)=0\)</span></p>
+<p>[<strong>計算</strong>] <span class="math inline">\(\phi_1 = \exp \left( x_3-x_2(x_4-x_1)-\dfrac{2}{3}x_2^3 \right)F&#39;(z)\)</span> , <span class="math inline">\(\phi_2 = \exp \left( x_3-x_2(x_4-x_1)-\dfrac{2}{3}x_2^3 \right)F&#39;&#39;(z)\)</span></p>
+<p>とすると</p>
+<p><span class="math inline">\((\partial_2\partial_3)\phi = \partial_2\phi=-(x_4-x_1)\phi-2x_2^2\phi-2x_2\phi_1\)</span></p>
+<p><span class="math inline">\((\partial_1\partial_4)\phi =\partial_1(-x_2\phi - \phi_1) =-(x_2^2\phi+x_2\phi_1)-(x_2\phi_1+\phi_2)=-x_2^2\phi-2x_2\phi_1-\phi_2\)</span></p>
+<p>などから、分かる</p>
+<p>[<strong>簡約の直接計算による導出</strong>] <span class="math inline">\(Z(\psi)=0 \Rightarrow \psi(x_1, x_2, x_3, x_4) = P(x_2^2 - 2 x_1, x_1 + x_4, x_1 x_2 - 2 x_2^3/3 - x_2 x_4 + x_3)\)</span></p>
+<p><span class="math inline">\(P=P(t_1,t_2,t_3)\)</span> について <span class="math inline">\(X(\psi)=\psi,Y(\psi)=0\)</span> から</p>
+<p><span class="math inline">\(\dfrac{\partial P}{\partial t_1}=\dfrac{\partial P}{\partial t_2}\)</span></p>
+<p><span class="math inline">\(\dfrac{\partial P}{\partial t_3} = P\)</span></p>
+<p>となって、<span class="math inline">\(P(t_1,t_2,t_3)= e^{t_3}F(t_1+t_2)\)</span></p>
+<p><span class="math inline">\(t_1,t_2=x_2^2-2x_1,x_1+x_4\)</span> に対して、<span class="math inline">\(t_1+t_2=z\)</span> に注意して、<span class="math inline">\(\psi\)</span>が超双曲方程式を満たすという条件から、Airyの微分方程式が出る</p>
+<h2 id="gauss超幾何関数の場合">Gauss超幾何関数の場合</h2>
+<p><span class="math inline">\(\phi(x_1,x_2,x_3,x_4) = x_1^{c-1}x_2^{-a} x_3^{-b} F\left(\dfrac{x_1x_4}{x_2x_3}\right)\)</span></p>
+<p><span class="math inline">\(z = \dfrac{x_1x_4}{x_2x_3}\)</span> として</p>
+<p><span class="math inline">\((\partial_2 \partial_3 - \partial_1\partial_4)\phi = x_1^{c-1}x_2^{-a-1}x_3^{-b-1}\left( (z-z^2)F&#39;&#39;(z)-(a+b+1)zF&#39;(z)+cF&#39;(z)-abF(z) \right)\)</span></p>
+<p><span class="math inline">\(\phi\)</span>が超双曲方程式の解であることと、<span class="math inline">\(F\)</span>がGauss超幾何関数であることは同値</p>
+<p><span class="math inline">\(\begin{cases} X= -x_3\partial_3-x_4\partial_4 \\ Y=-x_1\partial_1-x_2\partial_2 \\ Z=x_2\partial_2+x_4\partial_4 \end{cases}\)</span></p>
+<h2 id="kummer合流型超幾何関数の場合">Kummer合流型超幾何関数の場合</h2>
+<p><span class="math inline">\(\phi(x_1,x_2,x_3,x_4) = e^{x_1/x_2}x_2^{\alpha-1}x_4^{\gamma-\alpha-1} z^{\gamma-1}F(z)\)</span></p>
+<p><span class="math inline">\(z = \dfrac{x_3}{x_4} - \dfrac{x_1}{x_2}\)</span></p>
+<p>に対して、<span class="math inline">\(F(z)\)</span>がKummerの超幾何微分方程式</p>
+<p><span class="math inline">\(z F&#39;&#39;(z) + (\gamma-z)F&#39;(z) - \alpha F(z) = 0\)</span></p>
+<p>を満たすことと、<span class="math inline">\(\phi\)</span>が超双曲方程式を満たすことは同値。</p>
+<p><span class="math inline">\(\begin{cases} X=x_2 \partial_1+x_4\partial_3 \\ Y=x_1 \partial_1+x_2\partial_2+x_3\partial_3+x_4\partial_4 \\ Z=-x_1\partial_1-x_2\partial_2 \end{cases}\)</span></p>
+<p>簡単な計算で、</p>
+<p><span class="math inline">\(X(\psi) = a \psi \Rightarrow \psi(x_1,x_2,x_3,x_4)=e^{a x_1/x_2}f(x_2,x_4,\dfrac{x_2x_3-x_1x_4}{x_2})\)</span></p>
+<p><span class="math inline">\(Z(\psi)=c\psi \Rightarrow f(t_1,t_2,t_3) = t_2^{-c}g(t_1,t_3)\)</span></p>
+<p><span class="math inline">\((Y+Z)(\psi)=(b+c)\psi \Rightarrow g(u_1,u_2) = u_1^{b+c} h(u_2/u_1)\)</span></p>
+<p>が分かる。従って、</p>
+<p><span class="math inline">\(\psi(x_1,x_2,x_3,x_4) = e^{-ax_1/x_2} x_2^{b+c} x_4^{-c} h(z)\)</span></p>
+<p><span class="math inline">\((a,b,c)=(-1,\gamma-2,1-\gamma)\)</span> として、 <span class="math inline">\(F(z) = z^{1-\gamma} h(z)\)</span> とすればいい</p>
+<h2 id="bessel関数の場合">Bessel関数の場合</h2>
+<p>簡約する群の無限小生成子は</p>
+<p><span class="math inline">\(\begin{cases} X = -x_1 \partial_{3} - x_2 \partial_{4} \\ Y=x_2 \partial_1 + x_4 \partial_3 \\ Z=-x_1\partial_1-x_2\partial_2-x_3\partial_3-x_4\partial_4 \end{cases}\)</span></p>
+<p><span class="math inline">\(Z(\psi) = c\psi \Rightarrow \psi(x_1,x_2,x_3,x_4) = x_2^{-c} f(\dfrac{x_1}{x_2},\dfrac{x_3}{x_2},\dfrac{x_4}{x_2})\)</span></p>
+<p><span class="math inline">\(f=f(t_1,t_2,t_3)\)</span> に対しては</p>
+<p><span class="math inline">\(X(\psi) = a \psi \Rightarrow t_1 \dfrac{\partial f}{\partial t_2} + \dfrac{\partial f}{\partial t_3} = -a f \Rightarrow f(t_1,t_2,t_3)=e^{-at_2/t_1}g(t_1,t_3-\dfrac{t_2}{t_1})\)</span></p>
+<p>従って、 <span class="math inline">\(\psi(x_1,x_2,x_3,x_4) = x_2^{-c} e^{-ax_3/x_1} g(\dfrac{x_1}{x_2},\dfrac{x_4}{x_2}-\dfrac{x_3}{x_1})\)</span></p>
+<p><span class="math inline">\(g=g(u_1,u_2)\)</span> に対して</p>
+<p><span class="math inline">\(Y(\psi)=b\psi \Rightarrow -a u_2 g + u_1\dfrac{\partial g}{\partial u_1}-u_2\dfrac{\partial g}{\partial u_2} = bg \Rightarrow g(u_1,u_2)=\exp(bu_1-au_2) h(u_1u_2)\)</span></p>
+<p><span class="math inline">\(z=u_1u_2=\dfrac{x_1x_4-x_2x_3}{x_2^2}\)</span> として、結果をまとめると</p>
+<p><span class="math inline">\(\psi(x_1,x_2,x_3,x_4) = x_2^{-c}e^{-ax_3/x_1}\exp(-ax_4/x_2 + ax_3/x_1 + bx_1/x_2)h(z)=x_2^{-c}e^{(-ax_4+bx_1)/x_2}h(z)\)</span></p>
+<p>で、<span class="math inline">\(h(z)\)</span>の満たす微分方程式は</p>
+<p><span class="math inline">\(z h&#39;&#39;(z) + c h&#39;(z) + ab h(z)==0\)</span></p>
+<p>となる。 <span class="math inline">\((a,b,c)=(1,1,1+\alpha)\)</span> の時、<span class="math inline">\(x^2 = 4 z\)</span>と変数変換すると、微分方程式は以下の形に変換される。</p>
+<p><span class="math inline">\(y&#39;&#39; + \dfrac{1+2 \alpha}{x} y&#39; + y=0\)</span></p>
+<p>この微分方程式の解<span class="math inline">\(y=y(x)\)</span>に対して、<span class="math inline">\(x^{\alpha} y\)</span>は、Bessel関数となる。</p>
+<h2 id="hermite-weber関数の場合">Hermite-Weber関数の場合</h2>
+<p>簡約する群の無限小生成子は</p>
+<p><span class="math inline">\(\begin{cases} X=\partial_1 \\ Y=x_4\partial_3+x_2\partial_1+\partial_2 \\ Z=x_3\partial_3+x_4\partial_4 \end{cases}\)</span></p>
+<p>明らかに <span class="math inline">\(z = \dfrac{x_3}{x_4} - x_2\)</span> とすればいい。</p>
+<p><span class="math inline">\(Y({\psi}) = b \psi \Rightarrow \psi(x_1,x_2,x_3,x_4) = e^{\pm b x_2} f(x_4,x_2^2-2x_1,x_3-x_2x_4)\)</span></p>
+<p><span class="math inline">\(X(\psi)=a \psi \Rightarrow -2 \dfrac{\partial f}{\partial t_2} = a f- \Rightarrow \psi = e^{\pm bx_2}g(x_4,x_3-x_2x_4)\exp\left(-\dfrac{a}{2}(x_2^2-2x_1)\right)\)</span></p>
+<p><span class="math inline">\(Z(\psi)=c\psi \Rightarrow g(t_1,t_2) = t_1^c h(\dfrac{t_2}{t_1}) \Rightarrow \psi=e^{\pm b x_2} x_4^c\exp\left(-\dfrac{a}{2}(x_2^2-2x_1)\right) h(z)\)</span></p>
+<p><span class="math inline">\(\psi\)</span>が超双曲方程式を満たすとして、<span class="math inline">\(h\)</span>が満たすべき微分方程式は</p>
+<p><span class="math inline">\(h&#39;&#39;(z) -(a z + b)h&#39;(z) - a c h(z) = 0\)</span></p>
+<p>となる。</p>
+<p><span class="math inline">\((a,b,c)=(1,0,-\gamma)\)</span> とすると</p>
+<p><span class="math inline">\(h&#39;&#39;(z) - z h&#39;(z) + \gamma h(z) = 0\)</span></p>
+<p>で、Hermite-Weber関数の満たす微分方程式を得る。</p>
+<h2 id="メモ線形微分方程式と積分変換">メモ:線形微分方程式と積分変換</h2>
+<h4 id="laplace-equation-in-mathbbr3-whittaker1903">Laplace equation in <span class="math inline">\(\mathbb{R}^3\)</span> (Whittaker,1903)</h4>
+<p><span class="math inline">\(\phi(x,y,z) = \displaystyle \int_{0}^{2\pi} f(z+ix \cos \alpha+iy\sin \alpha,\alpha)d\alpha\)</span></p>
+<p><span class="math inline">\(\Rightarrow \dfrac{\partial^2\phi}{\partial x^2} + \dfrac{\partial^2\phi}{\partial y^2} + \dfrac{\partial^2\phi}{\partial z^2} = 0\)</span></p>
+<h4 id="laplace-equation-in-mathbbr4-bateman1904">Laplace equation in <span class="math inline">\(\mathbb{R}^4\)</span> (Bateman,1904)</h4>
+<p><span class="math inline">\(\phi(x,y,z,\tau) = \displaystyle \oint_{\Gamma \subset \mathbb{CP}^1} f((z+ i \tau) +　(x+iy)\lambda,(x-iy)-(z-i\tau)\lambda,\lambda)d\lambda\)</span></p>
+<p><span class="math inline">\(\Rightarrow \dfrac{\partial^2\phi}{\partial \tau^2} + \dfrac{\partial^2\phi}{\partial x^2} + \dfrac{\partial^2\phi}{\partial y^2} + \dfrac{\partial^2 \phi}{\partial z^2} = 0\)</span></p>
+<h4 id="ultrahyperbolic-equation-in-mathbbr4-fritz-john1938">ultrahyperbolic equation in <span class="math inline">\(\mathbb{R}^4\)</span> (Fritz John,1938)</h4>
+<p>for <span class="math inline">\(f:\mathbb{R}^3 \to \mathbb{R}\)</span>, oriented line <span class="math inline">\(L \subset \mathbb{R}^3\)</span> <span class="math inline">\(, \phi(L) = \int_L f ds\)</span></p>
+<p><span class="math inline">\(\phi(\alpha_1,\alpha_2,\beta_1,\beta_2) = \displaystyle \int_{-\infty}^{\infty}f(\alpha_1 s+ \beta_1 , \alpha_2 s+\beta_2,s)ds\)</span></p>
+<p><span class="math inline">\(\Rightarrow \dfrac{\partial^2 \phi}{\partial \alpha_1 \beta_2} - \dfrac{\partial^2 \phi}{\partial \alpha_2 \beta_1} = 0\)</span></p>
+<p><span class="math inline">\(\Leftrightarrow \dfrac{\partial^2\phi}{\partial x^2} + \dfrac{\partial^2\phi}{\partial z^2} - \dfrac{\partial^2\phi}{\partial y^2} - \dfrac{\partial^2 \phi}{\partial t^2} = 0\)</span></p>
+<p><span class="math inline">\((\alpha_1=x+y,\alpha_2=t+z,\beta_1=t-z,\beta_2=x-y)\)</span></p>
+<h4 id="massless-klein-gordon-equation-penrose1967">massless Klein-Gordon equation (Penrose,1967)</h4>
+<p><span class="math inline">\(\phi(x,y,z,t) = \displaystyle \oint_{\Gamma \subset \mathbb{CP}^1} f((z+t) +(x+iy)\lambda,(x-iy)-(z-t)\lambda,\lambda)d\lambda\)</span></p>
+<p><span class="math inline">\(\Rightarrow \dfrac{\partial^2\phi}{\partial t^2} - \dfrac{\partial^2\phi}{\partial x^2} - \dfrac{\partial^2\phi}{\partial y^2} - \dfrac{\partial^2 \phi}{\partial z^2} = 0\)</span></p>
