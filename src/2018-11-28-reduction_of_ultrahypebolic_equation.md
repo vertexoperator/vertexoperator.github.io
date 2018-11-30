@@ -181,7 +181,7 @@ $\Rightarrow \dfrac{\partial^2\phi}{\partial x^2} + \dfrac{\partial^2\phi}{\part
 
 #### Laplace equation in $\mathbb{R}^4$ (Bateman,1904)
 
-$\phi(x,y,z,\tau) = \displaystyle \oint_{\Gamma \subset \mathbb{CP}^1} f((z+ i \tau) +　(x+iy)\lambda,(x-iy)-(z-i\tau)\lambda,\lambda)d\lambda$
+$\phi(x,y,z,\tau) = \displaystyle \oint_{\Gamma \subset \mathbb{CP}^1} f((z+ i \tau) +(x+iy)\lambda,(x-iy)-(z-i\tau)\lambda,\lambda)d\lambda$
 
 $\Rightarrow \dfrac{\partial^2\phi}{\partial \tau^2} + \dfrac{\partial^2\phi}{\partial x^2} + \dfrac{\partial^2\phi}{\partial y^2} + \dfrac{\partial^2 \phi}{\partial z^2} = 0$
 
