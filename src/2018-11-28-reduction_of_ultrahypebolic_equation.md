@@ -23,7 +23,7 @@ $\begin{cases} X=\partial_3 \\ Y=\partial_1+\partial_4 \\ Z=(x_4-x_1)\partial_3 
 
 $(\partial_2 \partial_3 - \partial_1\partial_4)\phi = \exp \left( x_3-x_2(x_4-x_1)-\dfrac{2}{3}x_2^3 \right)(F''(z)+zF(z))$
 
-なので、$\phi$が超双曲方程式を満たすことと、$F$がAiry関数であることは同値。
+なので、$\phi$が超双曲方程式を満たすことと、$F$がAiry微分方程式を満たすことは同値。
 加えて、$\phi$を上の形に取るために、付加的な条件が付く。
 
 $X(\phi)=\phi$,$Y(\phi)=0,Z(\phi)=0$
@@ -66,7 +66,7 @@ $z = \dfrac{x_1x_4}{x_2x_3}$
 
 $(\partial_2 \partial_3 - \partial_1\partial_4)\phi = x_1^{c-1}x_2^{-a-1}x_3^{-b-1}\left( (z-z^2)F''(z)-(a+b+1)zF'(z)+cF'(z)-abF(z) \right)$
 
-$\phi$が超双曲方程式の解であることと、$F$がGauss超幾何関数であることは同値
+$\phi$が超双曲方程式の解であることと、$F$がGauss超幾何微分方程式の解であることは同値
 
 $\begin{cases} X= -x_3\partial_3-x_4\partial_4 \\ Y=-x_1\partial_1-x_2\partial_2 \\ Z=x_2\partial_2+x_4\partial_4 \end{cases}$
 
@@ -138,7 +138,7 @@ $(a,b,c)=(1,1,1+\alpha)$
 
 $y'' + \dfrac{1+2 \alpha}{x} y' + y=0$
 
-この微分方程式の解$y=y(x)$に対して、$x^{\alpha} y$は、Bessel関数となる。
+この微分方程式の解$y=y(x)$に対して、$x^{\alpha} y$は、Bessel微分方程式の解となる。
 
 
 
