@@ -21,7 +21,9 @@ $\rho(h) = 2 z \dfrac{d}{dz} + 1$
 $[h,e]=2e , [h,f]=-2 f , [e,f] = h$
 
 初等的な計算で、
+
 $\begin{cases} \rho(h)z^n = (2n+1)z^n \\ \rho(e) z^n = (n+1) z^{n+1} \\ \rho(f)z^n = -n z^{n-1} \end{cases}$
+
 が分かる。
 
  &nbsp;
@@ -36,7 +38,7 @@ $V_{+}$,$V_{-}$それぞれへの$\mathfrak{sl}(2,\mathbb{C})$の表現は、lim
 
 $(\rho,V)$は、連続主系列表現の一つであり、連続主系列表現は、殆どの場合は、既約になるけど、これは、そうでない。
 
-反線形写像$\theta: \mathfrak{sl}(2,\mathbb{C}) to \mathfrak{sl}(2,\mathbb{C})$を
+反線形写像$\theta: \mathfrak{sl}(2,\mathbb{C}) \to \mathfrak{sl}(2,\mathbb{C})$を
 
 $\theta(e) = f , \theta(f) = e , \theta(h)=-h$
 
