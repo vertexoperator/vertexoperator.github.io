@@ -1,0 +1,89 @@
+---
+layout: layout2
+title: su(1,1)のlimit of discrete series
+---
+<h1 id="su11のlimit-of-discrete-series">su(1,1)のlimit of discrete series</h1>
+<h2 id="limit-of-discrete-series">limit of discrete series</h2>
+<p><span class="math inline">\(V=\mathbb{C}[z,z^{-1}]\)</span> に対して、<span class="math inline">\(V\)</span>上の表現 <span class="math inline">\(\rho : \mathfrak{sl}(2,\mathbb{C}) \to End(V)\)</span> を、以下で定義する。</p>
+<p><span class="math inline">\(\rho(e) = z^2 \dfrac{d}{dz} + z\)</span></p>
+<p><span class="math inline">\(\rho(f) = -\dfrac{d}{dz}\)</span></p>
+<p><span class="math inline">\(\rho(h) = 2 z \dfrac{d}{dz} + 1\)</span></p>
+<p>ここで、<span class="math inline">\(e,f,h\)</span>は、以下の条件を満たすChevalley基底とする</p>
+<p><span class="math inline">\([h,e]=2e , [h,f]=-2 f , [e,f] = h\)</span></p>
+<p>初等的な計算で、 <span class="math inline">\(\begin{cases} \rho(h)z^n = (2n+1)z^n \\ \rho(e) z^n = (n+1) z^{n+1} \\ \rho(f)z^n = -n z^{n-1} \end{cases}\)</span> が分かる。</p>
+<p> </p>
+<p><span class="math inline">\((\rho,V)\)</span>が<span class="math inline">\(\mathfrak{sl}(2,\mathbb{C})\)</span>の表現を定めることは容易にわかるが、既約ではなく、以下の2つの不変部分空間を持つ。</p>
+<p><span class="math inline">\(V_{+} = \mathbb{C}[z]\)</span></p>
+<p><span class="math inline">\(V_{-} = z^{-1}\mathbb{C}[z^{-1}]\)</span></p>
+<p><span class="math inline">\(V_{+}\)</span>,<span class="math inline">\(V_{-}\)</span>それぞれへの<span class="math inline">\(\mathfrak{sl}(2,\mathbb{C})\)</span>の表現は、limit of discrete seriesとして知られる表現になっている。</p>
+<p><span class="math inline">\((\rho,V)\)</span>は、連続主系列表現の一つであり、連続主系列表現は、殆どの場合は、既約になるけど、これは、そうでない。</p>
+<p>反線形写像<span class="math inline">\(\theta: \mathfrak{sl}(2,\mathbb{C}) to \mathfrak{sl}(2,\mathbb{C})\)</span>を</p>
+<p><span class="math inline">\(\theta(e) = f , \theta(f) = e , \theta(h)=-h\)</span></p>
+<p>で定めると、<span class="math inline">\(\theta\)</span>の固定点は、実Lie環を定義する。このLie環は、<span class="math inline">\(\mathfrak{su}(1,1)\)</span></p>
+<p><span class="math inline">\(V\)</span>上の内積を</p>
+<p><span class="math inline">\((z^n,z^m) = \delta_{nm}\)</span></p>
+<p>で定めると、<span class="math inline">\(v,w \in V\)</span>と$x (2,)に対して</p>
+<p><span class="math inline">\((\theta(x) v , w ) + (v , \theta(x)w) = 0\)</span></p>
+<p>が成立する。</p>
+<p><span class="math inline">\(V\)</span>自体は、この内積について完備ではないけれど、 <span class="math inline">\(z \mapsto e^{i \theta}\)</span>によって、</p>
+<p><span class="math inline">\(\mathbb{C}[z,z^{-1}] \hookrightarrow L^2(S^1)\)</span></p>
+<p>が定義できる。これは、単射であり、また、</p>
+<p><span class="math inline">\((f(z) , g(z)) = \dfrac{1}{2\pi}\displaystyle \int_{0}^{2\pi} f(e^{i\theta})\overline{g(e^{i \theta})} d\theta\)</span></p>
+<p>で、内積を保つ。</p>
+<h2 id="poisson積分">Poisson積分</h2>
+<p><span class="math inline">\(V=\mathbb{C}[z,z^{-1}]\)</span>と、<span class="math inline">\(\mathbb{C}[w] \oplus \bar{w} \mathbb{C}[\bar{w}]\)</span> の間には、自然な(ベクトル空間としての同型が存在する)。</p>
+<p>更に、 <span class="math inline">\(\mathbb{C}[w] \oplus \bar{w} \mathbb{C}[\bar{w}]\)</span> と、二変数調和多項式の全体 <span class="math inline">\(\mathcal{H} = \{f \in \mathbb{C}[x,y] | \Delta f = 0 \}\)</span> には、 <span class="math inline">\((w,\bar{w}) \mapsto (x+iy , x- iy)\)</span> によって、1:1対応が存在する。</p>
+<p><span class="math inline">\(V\)</span>から、<span class="math inline">\(\mathcal{H}\)</span>への写像は、解析的には、Poisson積分で与えることができる。解析的な文脈では、Poisson積分は、単位円板<span class="math inline">\(D= \{ z \in \mathbb{C} | |z| &lt; 1 \}\)</span>の境界<span class="math inline">\(\partial D \simeq S^1\)</span>上の関数から、<span class="math inline">\(D\)</span>上の調和関数への写像と見なされる</p>
+<p>Poisson核を形式的に、</p>
+<p><span class="math inline">\(P(z,w) = \displaystyle \sum_{n=0}^{\infty}　z^n \bar{w}^n + \displaystyle \sum_{n=1}^{\infty} z^{-n} w^n\)</span></p>
+<p>とすれば</p>
+<p><span class="math inline">\(P(e^{i \theta} , w) = \dfrac{1}{1-e^{i\theta}\bar{w}} + \dfrac{e^{- i\theta}w}{1-e^{-i\theta}w} = \dfrac{1-|w|^2}{|1-e^{-i\theta}w|^2} = \dfrac{1-|w|^2}{|w-e^{i\theta}|^2}\)</span></p>
+<p>となり、通常のPoisson核を得ることが出来る</p>
+<h2 id="cayley変換">　Cayley変換</h2>
+<p>単位円板は、上半平面<span class="math inline">\(\mathbb{C}_{+} = \{ z \in \mathbb{C} | \mathrm{Im}(z) &gt; 0\}\)</span>からの等角全単射を持つ。<span class="math inline">\(\mathbb{C}_{+}\)</span>の境界は、<span class="math inline">\(\mathbb{R}\)</span>である。</p>
+<p>上半平面から、単位円板への全射</p>
+<p><span class="math inline">\(z \mapsto \dfrac{z-i}{z+i}\)</span></p>
+<p>は、Cayley変換として知られる。</p>
+<p><span class="math inline">\(n \in \mathbb{Z}\)</span>に対して</p>
+<p><span class="math inline">\(z^n \mapsto v_{n}(x)=\dfrac{1}{\sqrt{\pi}} \dfrac{1}{x+i}\left( \dfrac{x-i}{x+i}\right)^n\)</span></p>
+<p><span class="math inline">\(H&#39; = -i(1+x^2)\dfrac{d}{dx}-ix\)</span></p>
+<p><span class="math inline">\(E&#39; = \dfrac{1}{2i}(x-i)^2 \dfrac{d}{dx} + \dfrac{1}{2i}(x-i)\)</span></p>
+<p><span class="math inline">\(F&#39; = \dfrac{i}{2} (x+i)^2 \dfrac{d}{dx} + \dfrac{i}{2}(x+i)\)</span></p>
+<p>とすると</p>
+<p><span class="math inline">\(H&#39; \cdot v_n = (2n+1) v_n\)</span></p>
+<p><span class="math inline">\(E&#39; \cdot v_n = (n+1) v_{n+1}\)</span></p>
+<p><span class="math inline">\(F&#39; \cdot v_n = -n v_{n-1}\)</span></p>
+<p>こうして、再び、limit of discrete seriesの実現を得る。<span class="math inline">\(v_n(x)\)</span>に、広く使われる名前は、付いていないようだけど、Wienerの有理関数と呼ばれていることがある</p>
+<p>歪エルミート共役を取る操作<span class="math inline">\(\theta&#39;\)</span>は、以下で定まる</p>
+<p><span class="math inline">\(\theta&#39;(H&#39;) = -H&#39; , \theta&#39;(E&#39;) = F&#39; , \theta&#39;(F&#39;) = E&#39;\)</span></p>
+<p>そして、<span class="math inline">\(\theta&#39;\)</span>の固定点は、以下の元の実係数の線型結合で与えられる</p>
+<p><span class="math inline">\(H = -(E&#39;+F&#39;) = 2 \dfrac{d}{dx} + 1\)</span></p>
+<p><span class="math inline">\(E = \dfrac{1}{2}(iH&#39; + iE&#39; - iF&#39;) = x^2 \dfrac{d}{dx} + x\)</span></p>
+<p><span class="math inline">\(F = -\dfrac{1}{2}(iH&#39; - i E&#39; + iF&#39;) = -\dfrac{d}{dx}\)</span></p>
+<p><span class="math inline">\(g = \left(\begin{array}{cc} a &amp; b \\ c &amp; d \end{array}\right) \in SL(2,\mathbb{R})\)</span>の<span class="math inline">\(L^2(\mathbb{R})\)</span>への作用を</p>
+<p><span class="math inline">\(\rho(g)(f)(x) = \dfrac{1}{cx+d}f\left(\dfrac{ax+b}{cx+d}\right)\)</span></p>
+<p>で定める時、無限小作用は、<span class="math inline">\(H,E,F\)</span>の線形結合で与えられる</p>
+<h2 id="laguerre関数">Laguerre関数</h2>
+<p><span class="math inline">\(v_n(x)\)</span>は、Fourier変換すると、スケーリングと定数倍を除いて、Laguerre関数に移る</p>
+<p><span class="math inline">\(n \geq 0\)</span>の時</p>
+<p><span class="math inline">\(\dfrac{1}{2 \pi} \displaystyle \int_{-\infty}^{\infty} e^{-itx} \dfrac{(x-i)^n}{(x+i)^{n+1}}dx = \begin{cases} \dfrac{1}{i}e^{-t}L_n(2t) &amp; (t \geq 0) \\ 0 &amp; (t &lt;0) \end{cases}\)</span></p>
+<p><span class="math inline">\(L_n(t)\)</span>は、Laguerre多項式で、</p>
+<p><span class="math inline">\(L_n(t) = \dfrac{e^t}{n!} \dfrac{d^n}{dt^n} (e^{-t} t^n)\)</span></p>
+<p>によって定義される</p>
+<p>Laguerre関数<span class="math inline">\(e^{-x/2}L_n(x)\)</span>が、<span class="math inline">\(L^2(0,\infty)\)</span>の直交基底をなすことは、よく知られている</p>
+<p><span class="math inline">\(V=\mathbb{C}[z,z^{-1}]\)</span>を、<span class="math inline">\(V_{+}=\mathbb{C}[z]\)</span>と<span class="math inline">\(V_{-} = z^{-1}\mathbb{C}[z^{-1}]\)</span>という二つのlimit of discrete seriesの表現空間に分解したが、この分解は</p>
+<p><span class="math inline">\(L^2(\mathbb{R}) \simeq L^2(0,\infty) \oplus L^2(-\infty,0)\)</span></p>
+<p>に対応している。</p>
+<p><span class="math inline">\(h_n(x) = \begin{cases} e^{-x/2}L_n(x)U(x) &amp; (n \geq 0) \\ -e^{x/2}L_{-n-1}(-x)U(-x) &amp; (n&lt;0) \end{cases}\)</span></p>
+<p><span class="math inline">\(U(x) = \begin{cases} 1 &amp; (x \geq 0) \\ 0 &amp; (x&lt;0) \end{cases}\)</span></p>
+<p>とすれば、<span class="math inline">\(h_n(x)\)</span>は、<span class="math inline">\(L^2(\mathbb{R})\)</span>の正規直交基底になる。</p>
+<p>Fourier変換しただけなので、<span class="math inline">\(h_n(x)\)</span>を基底として、limit of discrete seriesを実現することもできる</p>
+<h2 id="hilbert変換と解析信号">Hilbert変換と解析信号</h2>
+<p><span class="math inline">\(h_n(\omega)\)</span>と<span class="math inline">\(v_n(t)\)</span>は、互いにFourier変換の関係にある。</p>
+<p><span class="math inline">\(L^2(\mathbb{R})\)</span>から<span class="math inline">\(L^2(\mathbb{R})\)</span>へのHilbert変換は、</p>
+<p><span class="math inline">\(v_n(t) \mapsto -i v_n(t) (n \geq 0)\)</span></p>
+<p><span class="math inline">\(v_n(t) \mapsto i v_n(t) (n&lt;0)\)</span></p>
+<p>という変換として理解できる。<span class="math inline">\(\mathcal{H}\)</span>をHilbert変換とすると</p>
+<p><span class="math inline">\(u \mapsto \dfrac{1}{2}(u + i \mathcal{H}(u))\)</span></p>
+<p>は、<span class="math inline">\(n \geq 0\)</span>に於いて、<span class="math inline">\(v_n\)</span>を不変に保ち、<span class="math inline">\(n&lt;0\)</span>では、<span class="math inline">\(v_n\)</span>を0に移すので、limit of (positive) discrete seriesへの射影となる</p>
+<p>しばしば、実信号をFourier変換して、正周波数成分のみを逆Fourier変換で戻すことによって、解析信号を得るという操作が行われる(Hilbert変換を計算する方法としても使える)が、正周波数成分をFourier変換した空間の基底は、<span class="math inline">\(h_n(\omega)\)</span> <span class="math inline">\((n \geq 0)\)</span> で与えられるので、同様に、limit of discrete seriesの表現空間へ射影している操作になっている。</p>

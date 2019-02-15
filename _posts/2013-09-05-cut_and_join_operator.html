@@ -1,0 +1,78 @@
+---
+layout: layout2
+title: cut-and-join operator
+---
+<h1 id="cut-and-join-operator">cut-and-join operator</h1>
+<p>cut-and-join operatorと誰が呼ぶようになったのかは分からない(cut-and-join equationという漸化式があって、それと同等の微分作用素という意味で名付けられたのだと思うけど)けれど、初出は以下の論文らしい</p>
+<p>A Differential Operator for Symmetric Functions and the Combinatorics of Multiplying Transpositions</p>
+<p><a href="http://www.ams.org/journals/tran/1994-344-01/S0002-9947-1994-1249468-3/" class="uri">http://www.ams.org/journals/tran/1994-344-01/S0002-9947-1994-1249468-3/</a></p>
+<h2 id="cut-and-join-operatorとschur多項式">cut-and-join operatorとSchur多項式</h2>
+<p>cut-and-join operatorは<span class="math inline">\(W_3\)</span>代数の0モードの生成元として定義できる(<span class="math inline">\(gl(\infty)\)</span>の普遍展開環の中心元と思うのが正しいらしい)。<span class="math inline">\(W_3\)</span>代数は、Virasoro代数の一般化で、<span class="math inline">\(L_n,J_n(n \in \mathbf{Z})\)</span>を生成元として、やや複雑な関係式で定義される。<span class="math inline">\(L_n\)</span>はHeisenberg代数</p>
+<p><span class="math inline">\([H_n,H_m] = n \cdot \delta_{n+m,0}\)</span></p>
+<p>を使って自由場表示</p>
+<p><span class="math inline">\(L_n = \dfrac{1}{2} \displaystyle \sum_{a+b=n} : H_a H_b :\)</span></p>
+<p>が存在する。これに対応して、</p>
+<p><span class="math inline">\(J_n = \dfrac{1}{3} \displaystyle \sum_{a+b+c=n} : H_a H_b H_c :\)</span></p>
+<p>という自由場表示があり、</p>
+<p><span class="math inline">\(H_n = \dfrac{\partial}{\partial t_n} \quad (n &gt; 0)\)</span></p>
+<p><span class="math inline">\(H_{-n} = n t_n \quad (n &gt; 0)\)</span></p>
+<p><span class="math inline">\(H_0 = 0\)</span></p>
+<p>という表現に対して、<span class="math inline">\(J_0\)</span>を計算したものが、標準的なcut-and-join operatorと(定数倍を除いて)一致する。直接計算によって</p>
+<p><span class="math inline">\(J_0 = \displaystyle \sum_{a,b=1}^{\infty} \left( ab t_a t_b \dfrac{\partial}{\partial t_{a+b}} + (a+b)t_{a+b} \dfrac{\partial}{\partial t_a} \dfrac{\partial}{\partial t_b} \right)\)</span></p>
+<p>を得る。</p>
+<p> </p>
+<p>cut-and-join operatorの著しい性質として、Schur多項式が固有関数となっていることがある。これは、Virasoro代数の0-モードの生成元</p>
+<p><span class="math inline">\(L_0 = \displaystyle \sum_{n=1}^{\infty} n t_n \dfrac{\partial}{\partial t_n}\)</span></p>
+<p>についても成り立つ性質である(<span class="math inline">\(L_0\)</span>の方は、単に次数作用素に過ぎない)</p>
+<p><span class="math inline">\(s_0 = 1\)</span></p>
+<p><span class="math inline">\(s_1 = t_1\)</span></p>
+<p><span class="math inline">\(s_2 = \dfrac{1}{2}t_1^2 + t_2\)</span></p>
+<p><span class="math inline">\(s_{1,1} = \dfrac{1}{2}t_1^2 - t_2\)</span></p>
+<p><span class="math inline">\(s_3 = \dfrac{1}{6}t_1^3 + t_1t_2 + t_3\)</span></p>
+<p><span class="math inline">\(s_{2,1} = \dfrac{1}{3}t_1^3 - t_3\)</span></p>
+<p><span class="math inline">\(s_{1,1,1} = \dfrac{1}{6}t_1^3 - t_1 t_2 + t_3\)</span></p>
+<p><span class="math inline">\(s_4 = \dfrac{1}{24}t_1^4 + t_1 t_3 + \dfrac{1}{2}t_1^2t_2 + \dfrac{1}{2}t_2^2 + t_4\)</span></p>
+<p><span class="math inline">\(s_{3,1} = \dfrac{1}{8} t_1^4 + \dfrac{1}{2} t_1^2 t_2 - \dfrac{1}{2}t_2^2 - t_4\)</span></p>
+<p><span class="math inline">\(s_{2,2} = \dfrac{1}{12}t_1^4 - t_1t_3 + t_2^2\)</span></p>
+<p><span class="math inline">\(s_{2,1,1} = \dfrac{1}{8}t_1^4 - \dfrac{1}{2}t_1^2 t_2 - \dfrac{1}{2}t_2^2 + t_4\)</span></p>
+<p><span class="math inline">\(s_{1,1,1,1} = \dfrac{1}{24}t_1^4 + t_1 t_3 - \dfrac{1}{2}t_1^2t_2 + \dfrac{1}{2}t_2^2 - t_4\)</span></p>
+<p>etc.に対して、計算して見ると、規則性は何となく分かる。証明は、例えば</p>
+<p>Generation of Matrix Models by W-operators</p>
+<p><a href="http://arxiv.org/abs/0902.2627" class="uri">http://arxiv.org/abs/0902.2627</a></p>
+<p>あたりを参照。</p>
+<h2 id="位相的弦理論の分配関数のw-representation">　位相的弦理論の分配関数のW-representation</h2>
+<p>ところで、上記論文”Generation of Matrix Models by W-operators”の主題は、Hermitian Matrix modelの分配関数やHurwitz tau functionが、<span class="math inline">\(W_3\)</span>代数の生成元のexponentialを適当な関数に作用させることで得られるという観察にある(“W-representation”とか呼ばれるっぽい)</p>
+<p>Kontsevich-Witten τ関数についても同様の表示が知られている。</p>
+<p>Cut-and-Join operator representation for Kontsevich-Witten tau-function</p>
+<p><a href="http://arxiv.org/abs/1009.4887" class="uri">http://arxiv.org/abs/1009.4887</a></p>
+<p>ここで使われている、cut-and-join operatorに似た作用素は</p>
+<p><span class="math inline">\(\dfrac{1}{3} \displaystyle \sum_{a+b+c=-3} : H_{2a+1} H_{2b+1} H_{2c+1} : + \dfrac{1}{16} H_{-3}\)</span></p>
+<p>という表示を持つ</p>
+<p>KdV階層のVirasoro対称性とKontsevich-Witten分配関数</p>
+<p><a href="http://formalgroup.tumblr.com/post/55961562768/kdv-virasoro-kontsevich-witten" class="uri">http://formalgroup.tumblr.com/post/55961562768/kdv-virasoro-kontsevich-witten</a></p>
+<p>も参照</p>
+<p>現在のところ、位相的極小模型や一般の位相的シグマ模型の分配関数に対して、類似の表現があるかどうかは分かってないらしい</p>
+<p>その他</p>
+<p>Complete Set of Cut-and-Join Operators in Hurwitz-Kontsevich Theory</p>
+<p><a href="http://arxiv.org/abs/0904.4227" class="uri">http://arxiv.org/abs/0904.4227</a></p>
+<p> </p>
+<p>Matrix Models for Random Partitions</p>
+<p><a href="http://arxiv.org/abs/1005.5715" class="uri">http://arxiv.org/abs/1005.5715</a></p>
+<h2 id="calogero-sutherlandハミルトニアンとcut-and-join-operator">Calogero-Sutherlandハミルトニアンとcut-and-join operator</h2>
+<p>Calogero-Sutherland模型のハミルトニアンは、Schur多項式の変形であるJack多項式を固有関数に持つことが知られているけれども、それは、cut-and-join operatorの変形を与えていると見なすことができる。自由場表示の導出については、</p>
+<p>Collective fields, Calogero-Sutherland model and generalized matrix models</p>
+<p><a href="http://arxiv.org/abs/hep-th/9411053" class="uri">http://arxiv.org/abs/hep-th/9411053</a></p>
+<p><span class="math inline">\(L_0 = \displaystyle \sum_{n&gt;0} H_{-n} H_n\)</span>に比例する項は、比例係数に粒子数<span class="math inline">\(N\)</span>に依存する項が入っているけども、全てのJack多項式を扱うためには、<span class="math inline">\(N \to \infty\)</span>の極限を取るので、この項を無視する。Jack多項式は<span class="math inline">\(L_0\)</span>の固有関数でもあるので、Calogero-Sutherland Hamiltonianから、この項を引いても、作用素は、Jack多項式を固有関数に持つ。具体的に、<span class="math inline">\(t_n\)</span>座標で書くと</p>
+<p><span class="math inline">\(H = \displaystyle \sum_{a,b=1}^{\infty} \left( (a+b)t_{a+b} \dfrac{\partial}{\partial t_a} \dfrac{\partial}{\partial t_b} + \beta a b t_a t_b \dfrac{\partial}{\partial t_{a+b}} \right) + \displaystyle \sum_{a=1}^{\infty} (1-\beta)a^2 t_a \dfrac{\partial}{\partial t_a}\)</span></p>
+<p>となる。<span class="math inline">\(\beta=1\)</span>の時、これはcut-and-join operatorに一致するので、β変形を与えていると見なすことができる(Calogero-Sutherland模型の標準的な座標と、<span class="math inline">\(t_n\)</span>座標とは、いわゆる三輪変換で結びついている)</p>
+<h2 id="追記">2014/9/23追記</h2>
+<p>この式は</p>
+<p>Sekiguchi-Debiard operators at infinity</p>
+<p><a href="http://arxiv.org/abs/1212.2781" class="uri">http://arxiv.org/abs/1212.2781</a></p>
+<p>などに明示的に書いてある。<span class="math inline">\(L_0\)</span>と<span class="math inline">\(H\)</span>は、それぞれ1階、2階の微分作用素であるが、同様に、自然数<span class="math inline">\(n\)</span>に対して、<span class="math inline">\(n\)</span>階の微分作用素を具体的に構成し、互いに可換であることを示している。</p>
+<p>Integrable Hierarchy of the Quantum Benjamin-Ono Equation</p>
+<p><a href="http://arxiv.org/abs/1309.6464" class="uri">http://arxiv.org/abs/1309.6464</a></p>
+<p>でも、違った形で、”higher order Hamiltonian”を与えている</p>
+<p>Calogero-Sutherland HamiltonianはRuijsenaars模型のHamiltonianの極限として得られ、CS模型の波動関数であるJack多項式も、Macdonald多項式の極限として得られる。この場合も、粒子数を無限に持っていくことができ、同様に、全ての次数のHamiltonianを構成しているのが以下の論文。</p>
+<p>Macdonald operators at infinity</p>
+<p><a href="http://arxiv.org/abs/1212.2960" class="uri">http://arxiv.org/abs/1212.2960</a></p>
