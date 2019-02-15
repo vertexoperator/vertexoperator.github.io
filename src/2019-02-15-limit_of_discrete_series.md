@@ -44,11 +44,11 @@ $\theta(e) = f , \theta(f) = e , \theta(h)=-h$
 
 で定めると、$\theta$の固定点は、実Lie環を定義する。このLie環は、$\mathfrak{su}(1,1)$
 
-$V$上の内積を
+次に、$V$上の内積を
 
 $(z^n,z^m) = \delta_{nm}$
 
-で定めると、$v,w \in V$と$x \in \mathfrak{sl}(2,\mathbb{C})に対して
+で定めると、$v,w \in V$と$x \in \mathfrak{sl}(2,\mathbb{C})$に対して
 
 $(\theta(x) v , w ) + (v , \theta(x)w) = 0$
 
