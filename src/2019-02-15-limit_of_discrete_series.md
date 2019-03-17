@@ -91,7 +91,7 @@ $P(e^{i \theta} , w) = \dfrac{1}{1-e^{i\theta}\bar{w}} + \dfrac{e^{- i\theta}w}{
 となり、通常のPoisson核を得ることが出来る
 
 
-##　Cayley変換
+## Cayley変換
 
 単位円板は、上半平面$\mathbb{C}_{+} = \{ z \in \mathbb{C} | \mathrm{Im}(z) > 0\}$からの等角全単射を持つ。$\mathbb{C}_{+}$の境界は、$\mathbb{R}$である。
 
