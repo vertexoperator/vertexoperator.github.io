@@ -135,10 +135,16 @@ for(I=0;I&lt;5;I+=1){
 <p><span class="math inline">\((k+1)L_{k+1}^{(a)}(x) = (2k+1+a-x)L_{k}^{(a)}(x) - (k+a)L_{k-1}^{(a)}(x)\)</span></p>
 <p><span class="math inline">\(0 \leq a \leq n\)</span>で、<span class="math inline">\(a \in \mathbb{Z},n-a \in \mathbb{N}\)</span>の時は、</p>
 <p><span class="math inline">\(L_n^{(-a)}(x) = \dfrac{\Gamma(n-a+1)}{\Gamma(n+1)} (-x)^a L_{n-a}^{(a)}(x)\)</span></p>
-<p>で定義する。</p>
-<p><span class="math inline">\(R_{lm}(k) = (2k)^m e^{-k} L_{l-m}^{(2m)}(2k)\)</span>は、以下の微分方程式を満たす</p>
+<p>で定義する。この定義によれば、<span class="math inline">\(m \leq 0\)</span>の時は、</p>
+<p><span class="math inline">\((2k)^m L_{l-m}^{(2m)}(2k) = (2k)^{-|m|} L_{l+|m|}^{(-2|m|)}(2k) = \dfrac{\Gamma(l+|m|-2|m|+1)}{\Gamma(l+|m|+1)}(2k)^{-|m|}(-2k)^{2|m|}L_{l+|m|-2|m|}^{(2|m|)}(2k) = (2k)^{|m|} L_{l-|m|}^{(2|m|)}(2k)\)</span></p>
+<p>が従う。</p>
+<p><br />
+<br />
+また、<span class="math inline">\(R_{lm}(k) = (2k)^m e^{-k} L_{l-m}^{(2m)}(2k)\)</span>は、以下の微分方程式を満たす</p>
 <p><span class="math inline">\(\left( k \dfrac{\partial^2}{\partial k^2} + \dfrac{\partial}{\partial k} - \dfrac{m^2}{k} - k + 2 l + 1 \right)R =0\)</span></p>
-<p>振動子表現との同型は</p>
+<p><br />
+<br />
+そして、振動子表現との同型は</p>
 <p><span class="math inline">\(f_{lm}(\mathbf{k}) \Leftrightarrow \sqrt{\dfrac{1}{(l+m)!(l-m)!}}z_1^{l+m}z_2^{l-m}\)</span></p>
 <p>で定まっている。</p>
 <p>明らかに、<span class="math inline">\(\deg(z_1^{l+m}z_2^{l-m}) = 2l\)</span></p>
