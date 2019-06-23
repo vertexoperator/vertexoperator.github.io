@@ -27,7 +27,7 @@ $t - t_0= \displaystyle \int dt = \displaystyle\int r d\tau = \displaystyle \int
 $= \dfrac{1}{2}(|A|^2+|B|^2)\tau + (|B|^2-|A|^2)\dfrac{\sin(2\omega\tau)}{4 \omega} - (A\bar{B}+\bar{A}B) \dfrac{\cos(2\omega \tau)}{4\omega}$　　　
 
 
-$t-t_0=F(\tau)$の形($F$は$dt/d\tau = r >0$なので逆関数は一価)で$\tau = F^{-1}(t)$を、上の式に放り込んで、$x=u^2$が"解析解"となる。
+$t=F(\tau)$の形($F$は$dt/d\tau = r >0$なので逆関数は一価)で$\tau = F^{-1}(t)$を、上の式に放り込んで、$x=u^2$が"解析解"となる。
 
 $F$の逆関数は、簡単には求まらないので
 $A = A_r + \sqrt{-1} A_i , B=B_r + \sqrt{-1} B_i \space (A_r,A_i,B_r,B_i \in \mathbf{R})$と置くと、以下が解となる
