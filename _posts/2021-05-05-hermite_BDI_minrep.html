@@ -1,0 +1,113 @@
+---
+layout: layout2
+title: so(n+1,2)の極小表現の実現
+---
+<h1 id="son12の極小表現の実現"><span class="math inline">\(so(n+1,2)\)</span>の極小表現の実現</h1>
+<p>共形代数<span class="math inline">\(so(n+1,2)\)</span>の極小表現は、massless scalar field equationのpositive energy solutionの空間として実現できる</p>
+<p>実空間の座標を<br />
+<span class="math inline">\(\mathbf{x} = (x_0,x_1,\cdots,x_n)=(x_0,\mathbf{r})=(t,r\Omega_r)\)</span><br />
+と取り、運動量空間の座標を<br />
+<span class="math inline">\(\mathbf{k} = (k_0,k_1,\cdots,k_n)=(k,k\Omega_k)\)</span><br />
+とする。</p>
+<p>ここで、<br />
+<span class="math inline">\(\Omega_r ,\Omega_k \in S^{n-1}\)</span><br />
+は単位ベクトル。<br />
+<span class="math inline">\(r = \sqrt{x_1^2+\cdots + x_n^2}\)</span>、<span class="math inline">\(k = \sqrt{k_1^2+\cdots + k_n^2}\)</span></p>
+<p>エネルギーと運動量の関係式<br />
+<span class="math inline">\(k_0^2 - k_1^2 - \cdots - k_n^2=0\)</span><br />
+及び、正エネルギー条件<br />
+<span class="math inline">\(k_0 &gt;0\)</span><br />
+より、<br />
+<span class="math inline">\(k=k_0 &gt; 0\)</span><br />
+が成り立つ。</p>
+<h2 id="最低ウェイトベクトルの計算">最低ウェイトベクトルの計算</h2>
+<p>論文<a href="https://arxiv.org/abs/0901.2280">The minimal representation of the conformal group and classic solutions to the wave equation</a>によって、実空間での最低ウェイトベクトルは、</p>
+<p><span class="math inline">\(\Psi(\mathbf{x}) = \dfrac{1}{((1-it)^2+r^2)^{(d-1)/2}}\)</span></p>
+<p>で与えられる。</p>
+<p>運動量空間での最低ウェイトベクトルは、実空間の最低ウェイトベクトルをFourier変換すると計算できる。平面波を、hyperspherical harmonicsで展開すると、計算はHankel変換に帰着する。</p>
+<p><span class="math inline">\(f(\mathbf{k}) = \dfrac{k_0}{\pi} \displaystyle \int \Psi(\mathbf{x})e^{-i \mathbf{k} \cdot \mathbf{x}} d\mathbf{r} = \dfrac{k_0}{\pi} \displaystyle \int d\Omega_r \displaystyle \int r^{n-1}dr \Psi(\mathbf{x}) e^{-ikt}e^{ikr\Omega_k\cdot\Omega_r}\)</span></p>
+<p>で、平面波を<a href="https://doi.org/10.1002/qua.560220406">Angular integrations in m‐dimensional spaces and hyperspherical harmonics</a>に従って、以下のように展開する</p>
+<p><span class="math inline">\(e^{ikr\Omega_k\cdot\Omega_r} = 4\pi \displaystyle \sum_{l=0}^{\infty} i^{l} \dfrac{J_{l+\frac{n}{2}-1}(kr)}{(kr)^{\frac{n}{2}-1}}\sum_{\mu}Y_{l\mu}(\Omega_k)Y_{l\mu}^{*}(\Omega_r)\)</span></p>
+<p>ここで、<span class="math inline">\(J_{\nu}\)</span>は、Bessel関数。そのまま代入すると、以下のようになる。</p>
+<p><span class="math inline">\(f(\mathbf{k})=\dfrac{4k}{k^{\frac{n}{2}-1}}\displaystyle \int d\Omega_r \displaystyle \int r^{\frac{n}{2}}dr\Psi(\mathbf{x})e^{-ikt}\sum_{l=0}^{\infty} i^{l} J_{l+\frac{n}{2}-1}(kr)\sum_{\mu}Y_{l\mu}(\Omega_k)Y_{l\mu}^{*}(\Omega_r)\)</span></p>
+<p><span class="math inline">\(\Psi(\mathbf{x})\)</span>は、<span class="math inline">\(\Omega_r\)</span>に依存する項がないので、<span class="math inline">\(l=0\)</span>のみの項が残り、</p>
+<p><span class="math inline">\(f(\mathbf{k})=\dfrac{4ke^{-ikt}}{k^{\frac{n}{2}-1}}\displaystyle \int d\Omega_r \displaystyle \int \dfrac{r^{\frac{n}{2}}}{((1-it)^2+r^2)^{(n-1)/2}} J_{\frac{n}{2}-1}(kr)dr\)</span></p>
+<p><span class="math inline">\(\nu=\dfrac{n}{2}-1\)</span><br />
+として、Hankel変換と球の表面積の計算により、</p>
+<p><span class="math inline">\(f(\mathbf{k}) = \dfrac{4ke^{-ikt}}{k^{\nu}}\displaystyle \int d\Omega_r \dfrac{\sqrt{\pi}}{2^{\nu}\Gamma(\nu+\frac{1}{2})}k^{\nu-1} e^{-(1-it)k}=\dfrac{4\sqrt{\pi}}{2^{\nu}\Gamma(\nu+\frac{1}{2})}\dfrac{\pi^{\nu+1}}{\Gamma(\nu+1)} e^{-k}\)</span></p>
+<p>ガンマ関数の公式<br />
+<span class="math inline">\(\Gamma(z)\Gamma(z+\frac{1}{2}) = 2^{1-2z}\sqrt{\pi}\Gamma(2z)\)</span><br />
+を使って整理すると</p>
+<p><span class="math inline">\(f(\mathbf{k}) =\dfrac{2^{\nu}\pi^{\nu+1}}{\Gamma(d-1)}e^{-k}\)</span></p>
+<p>を得る。定数項を除けば</p>
+<p><span class="math inline">\(f(\mathbf{k}) \propto e^{-k}\)</span></p>
+<h2 id="運動量空間でのson12の作用">運動量空間での<span class="math inline">\(so(n+1,2)\)</span>の作用</h2>
+<p>標準的な共形代数の生成元として、添字<span class="math inline">\(a,b=1,\cdots,n\)</span>を使って</p>
+<p><span class="math inline">\(P_0 = i k\)</span></p>
+<p><span class="math inline">\(P_{a} = -i k_a\)</span></p>
+<p><span class="math inline">\(M_{0a} = k \partial_{a}\)</span></p>
+<p><span class="math inline">\(M_{ab} = k_a \partial_{b} - k_b \partial_{a}\)</span></p>
+<p><span class="math inline">\(D = \dfrac{n-1}{2} + k_1 \partial_{1} + \cdots + k_n \partial_{n}\)</span></p>
+<p><span class="math inline">\(K_0 = ik(\partial_{1}^2 + \cdots + \partial_{n}^2)\)</span></p>
+<p><span class="math inline">\(K_{a} = i((n-1)\partial_{a} - k_a(\partial_1^2+\cdots \partial_n^2) +2\displaystyle \sum_{j=1}^{n}k_{j}\partial_{j}\partial_{a})\)</span></p>
+<p>を取ることができる。</p>
+<p><span class="math inline">\(\mu,\nu=0,\cdots,n\)</span>に対して、</p>
+<p><span class="math inline">\(Y_{\mu\nu} = M_{\mu\nu}\)</span></p>
+<p><span class="math inline">\(Y_{\mu,n+1} = -\dfrac{1}{2}(P_{\mu}+K_{\mu})\)</span></p>
+<p><span class="math inline">\(Y_{\mu,n+2} = \dfrac{1}{2}(P_{\mu}-K_{\mu})\)</span></p>
+<p><span class="math inline">\(Y_{n+1,n+2} = D\)</span></p>
+<p>と定義する。</p>
+<p>添字<span class="math inline">\(p,q,r,s=0,\cdots , n+2\)</span>に対して、<br />
+<span class="math inline">\(\eta_{pq} = \mathrm{diag}(-1,+1 ,\cdots .+1,+1,-1)\)</span></p>
+<p><span class="math inline">\(Y_{pp} = 0\)</span></p>
+<p>かつ、<span class="math inline">\(p&gt;q\)</span>に対して、</p>
+<p><span class="math inline">\(Y_{pq} = -Y_{qp}\)</span></p>
+<p>と定める。この時、</p>
+<p><span class="math inline">\([Y_{pq},Y_{rs}] = \left(\eta_{qr}Y_{ps} -\eta_{pr}Y_{qs} - \eta_{qs} Y_{pr} + \eta_{ps} Y_{qr}\right)\)</span></p>
+<p>が成立する。</p>
+<p><span class="math inline">\([D,P_{\mu}]=P_{\mu}\)</span></p>
+<p><span class="math inline">\([D,K_{\mu}]=-K_{\mu}\)</span></p>
+<p><span class="math inline">\([K_{\mu},P_{\nu}] = 2(\eta_{\mu\nu} D - M_{\mu\nu})\)</span></p>
+<p><span class="math inline">\([K_{\lambda} , M_{\mu\nu}] = (\eta_{\lambda\mu}K_{\nu}-\eta_{\lambda\nu}K_{\mu})\)</span></p>
+<p><span class="math inline">\([P_{\lambda} , M_{\mu\nu}] = (\eta_{\lambda\mu}P_{\nu}-\eta_{\lambda\nu}P_{\mu})\)</span></p>
+<p><span class="math inline">\([M_{\mu\nu},M_{\lambda\rho}] = (\eta_{\nu\lambda}M_{\mu\rho}+\eta_{\mu\rho}M_{\nu\lambda}-\eta_{\mu\lambda}M_{\nu\rho}-\eta_{\nu\rho}M_{\mu\lambda})\)</span></p>
+<p><span class="math inline">\([K_{\mu},K_{\nu}] = [P_{\mu},P_{\nu}] = [D,M_{\mu\nu}] = 0\)</span></p>
+<h2 id="cartan部分環ルート分解最低ウェイト条件">Cartan部分環、ルート分解、最低ウェイト条件</h2>
+<p>以下、<span class="math inline">\(m=[(n+3)/2]=\mathrm{rank}(so(n+1,2))\)</span></p>
+<p><span class="math inline">\(\mathfrak{g}_{\mathbf{C}} = so(n+1,2)_{\mathbf{C}} \simeq so(n+3,\mathbf{C})\)</span></p>
+<p><span class="math inline">\(j=0, \cdots , m-1\)</span>に対して、<span class="math inline">\(\mathfrak{g}_{\mathbf{C}}\)</span>のCartan部分環<span class="math inline">\(\mathfrak{h}\)</span>の基底を</p>
+<p><span class="math inline">\(h_j = i Y_{j,n+2-j}\)</span></p>
+<p>に取る。</p>
+<p><span class="math inline">\(Y_{0,n+2} \cdot f = i\dfrac{n-1}{2} f\)</span></p>
+<p><span class="math inline">\(Y_{1,n+1} \cdot f = 0\)</span></p>
+<p><span class="math inline">\(Y_{j,n+2-j} \cdot f= 0 \space ( j =2, \cdots , m-1)\)</span></p>
+<p><span class="math inline">\(\mathfrak{g}_{\mathbf{C}}\)</span>を、Cartan部分環の作用でルート分解する。</p>
+<p><span class="math inline">\(\epsilon,\epsilon&#39;=\pm 1\)</span>、<span class="math inline">\(0 \le j \lt k \le m-1\)</span>に対して</p>
+<p><span class="math inline">\(X_{jk}^{(\epsilon,\epsilon&#39;)} =Y_{jk} + \epsilon Y_{n+2-j,n+2-k} + i\epsilon \epsilon&#39; Y_{j,n+2-k} - i \epsilon&#39; Y_{n+2-j,k}\)</span></p>
+<p>を定義すると、<br />
+<span class="math inline">\(\eta_{jj}=\eta_{n+2-j,n+2-j}\)</span>,<span class="math inline">\(\epsilon^2=\epsilon&#39;^2=1\)</span><br />
+に注意して</p>
+<p><span class="math inline">\([Y_{j,n+2-j},X_{jk}^{(\epsilon\epsilon&#39;)}] = -i \epsilon&#39; \eta_{jj} X_{jk}^{(\epsilon\epsilon&#39;)}\)</span></p>
+<p><span class="math inline">\([Y_{k,n+2-k},X_{jk}^{(\epsilon\epsilon&#39;)}] = i \epsilon \epsilon&#39; \eta_{kk} X_{jk}^{(\epsilon \epsilon&#39;)}\)</span></p>
+<p>また、<span class="math inline">\(n\)</span>が偶数の時は</p>
+<p><span class="math inline">\(W_{j}^{(\epsilon)} = Y_{j,m} - i \epsilon Y_{n+2-j,m}\)</span></p>
+<p>として</p>
+<p><span class="math inline">\([Y_{j,n+2-j} , W_{j}^{(\epsilon)}] = -i \epsilon \eta_{jj} W_{j}^{(\epsilon)}\)</span></p>
+<p>添字<span class="math inline">\(a=1,\cdots,n\)</span>に対して、簡単な計算で</p>
+<p><span class="math inline">\(M_{0a} \cdot f = -k_a \cdot f\)</span></p>
+<p><span class="math inline">\(Y_{a,n+1} \cdot f = 0\)</span></p>
+<p><span class="math inline">\(Y_{a,n+2} \cdot f = -ik_a \cdot f\)</span></p>
+<p>かつ</p>
+<p><span class="math inline">\(Y_{0,n+1} \cdot f = -i(k - \dfrac{n-1}{2})f\)</span></p>
+<p><span class="math inline">\(Y_{0,n+2} \cdot f = \dfrac{i}{2}(n-1) f\)</span></p>
+<p><span class="math inline">\(Y_{n+1,n+2} \cdot f = -(k - \dfrac{n-1}{2})f\)</span></p>
+<p>で、回転対称性から、<span class="math inline">\(a,b=1,\cdots,n\)</span>に対しては</p>
+<p><span class="math inline">\(Y_{ab} \cdot f = M_{ab} \cdot f = 0\)</span></p>
+<p>なので、</p>
+<p><span class="math inline">\(W_{0}^{(-1)} \cdot f =0\)</span></p>
+<p><span class="math inline">\(W_{k}^{(\pm 1)} \cdot f = 0\)</span></p>
+<p><span class="math inline">\((X_{0k}^{(+1,+1)} +X_{0k}^{(-1,+1)})\cdot f = 2(Y_{0k} + i Y_{k,n+2})f = 0\)</span></p>
+<p><span class="math inline">\((X_{0k}^{(+1,+1)} - X_{0k}^{(-1,+1)})\cdot f=-2i(Y_{0,n+2-k}+iY_{n+2-k,n+2})f = 0\)</span></p>
+<p><span class="math inline">\(X_{0k}^{(\epsilon,+1)} \cdot f = 0\)</span></p>
+<p><span class="math inline">\(X_{1k}^{(\epsilon,\epsilon&#39;)} \cdot f = 0\)</span></p>
+<p><span class="math inline">\(X_{jk}^{(\epsilon,\epsilon&#39;)} \cdot f = 0\)</span></p>
