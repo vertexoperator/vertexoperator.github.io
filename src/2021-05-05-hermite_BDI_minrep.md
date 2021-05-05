@@ -18,9 +18,7 @@ $r = \sqrt{x_1^2+\cdots + x_n^2}$、$k = \sqrt{k_1^2+\cdots + k_n^2}$
 
 エネルギーと運動量の関係式
 $k_0^2 - k_1^2 - \cdots - k_n^2=0$
-及び、正エネルギー条件
-$k_0 >0$
-より、
+及び、正エネルギー条件$k_0 >0$より、
 $k=k_0 > 0$
 が成り立つ。
 
@@ -28,7 +26,7 @@ $k=k_0 > 0$
 ## 最低ウェイトベクトルの計算
 論文[The minimal representation of the conformal group and classic solutions to the wave equation](https://arxiv.org/abs/0901.2280)によって、実空間での最低ウェイトベクトルは、
 
-$\Psi(\mathbf{x}) = \dfrac{1}{((1-it)^2+r^2)^{(d-1)/2}}$
+$\Psi(\mathbf{x}) = \dfrac{1}{((1-it)^2+r^2)^{(n-1)/2}}$
 
 で与えられる。
 

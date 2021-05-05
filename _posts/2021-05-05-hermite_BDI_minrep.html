@@ -15,14 +15,12 @@ title: so(n+1,2)の極小表現の実現
 <span class="math inline">\(r = \sqrt{x_1^2+\cdots + x_n^2}\)</span>、<span class="math inline">\(k = \sqrt{k_1^2+\cdots + k_n^2}\)</span></p>
 <p>エネルギーと運動量の関係式<br />
 <span class="math inline">\(k_0^2 - k_1^2 - \cdots - k_n^2=0\)</span><br />
-及び、正エネルギー条件<br />
-<span class="math inline">\(k_0 &gt;0\)</span><br />
-より、<br />
+及び、正エネルギー条件<span class="math inline">\(k_0 &gt;0\)</span>より、<br />
 <span class="math inline">\(k=k_0 &gt; 0\)</span><br />
 が成り立つ。</p>
 <h2 id="最低ウェイトベクトルの計算">最低ウェイトベクトルの計算</h2>
 <p>論文<a href="https://arxiv.org/abs/0901.2280">The minimal representation of the conformal group and classic solutions to the wave equation</a>によって、実空間での最低ウェイトベクトルは、</p>
-<p><span class="math inline">\(\Psi(\mathbf{x}) = \dfrac{1}{((1-it)^2+r^2)^{(d-1)/2}}\)</span></p>
+<p><span class="math inline">\(\Psi(\mathbf{x}) = \dfrac{1}{((1-it)^2+r^2)^{(n-1)/2}}\)</span></p>
 <p>で与えられる。</p>
 <p>運動量空間での最低ウェイトベクトルは、実空間の最低ウェイトベクトルをFourier変換すると計算できる。平面波を、hyperspherical harmonicsで展開すると、計算はHankel変換に帰着する。</p>
 <p><span class="math inline">\(f(\mathbf{k}) = \dfrac{k_0}{\pi} \displaystyle \int \Psi(\mathbf{x})e^{-i \mathbf{k} \cdot \mathbf{x}} d\mathbf{r} = \dfrac{k_0}{\pi} \displaystyle \int d\Omega_r \displaystyle \int r^{n-1}dr \Psi(\mathbf{x}) e^{-ikt}e^{ikr\Omega_k\cdot\Omega_r}\)</span></p>
